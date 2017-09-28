@@ -1,0 +1,71 @@
+<div id="page-wrapper" class="page-wrapper">
+    <div class="container-home">
+        <p class="breadcrumb"><i></i>菜单管理</p>
+        <div class="btn-wrapper">
+            <a href="javascript:void(0);"class="btn-add btn-listorder" id="btn-listorder"><i></i>更新排序</a>
+            <a href="javascript:void(0);"class="btn-add" id="btn-Add"><i></i>添加</a>
+            <form action="/imoocnews/admin.php/admin/menu/index" method="get" class="sreach-form">
+                <span class="span-1">
+                    <label for="sreach-input">类别</label>
+                    <select name="type" class="sreach-input" id="sreach-input">
+                        <!--<option value="" <if condition = "$type eq -1">selected="selected"</if> >请选择类型</option>-->
+                        <option value="">请选择类型</option>
+                        <option value="1" <if condition = "$type eq 1">selected="selected"</if>>后台菜单</option>
+                        <option value="0" <if condition = "$type eq 0">selected="selected"</if>>前端导航</option>
+                    </select>
+                </span>
+                <span>
+                    <input type="submit" class="btn-submit" value="">
+                </span>
+            </form>
+        </div>
+        <div class="table-wrapper">
+            <form id="form-table">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <th colspan="1">排序</th>
+                    <th colspan="1">id</th>
+                    <th colspan="1">菜单名</th>
+                    <th colspan="1">模块名</th>
+                    <th colspan="1">类型</th>
+                    <th colspan="1">状态</th>
+                    <th colspan="1">操作</th>
+                </tr>
+                <volist name="menus" id="menu">
+                    <tr>
+                        <td width="10"><input size="4" type="text" name="listorder[{$menu.menu_id}]" value="{$menu.listorder}"/></td>
+                        <td>{$menu.menu_id}</td>
+                        <td>{$menu.name}</td>
+                        <td>{$menu.m}</td>
+                        <td>
+                            {/*<switch name="data.type">
+                                <case value="0">前端菜单</case>
+                                <case value="1">后台菜单</case>
+                                <default/>后台菜单
+                            </switch>*/}
+                            {$menu.type|getMenuType}
+                        </td>
+                        <td>
+                            {/*<switch name="data.status">
+                                <case value="0">关闭</case>
+                                <case value="1">正常</case>
+                                <default/>正常
+                            </switch>*/}
+                            {$menu.status|getStatus}
+                        </td>
+                        <td>
+                            <a href="javascript:void(0)" class="btn-update" id="btn-Update-{$menu.menu_id}" title="编辑" atr-id="{$menu.menu_id}"><i></i></a>
+                            <a href="javascript:void(0)" class="btn-delete" id="btn-Delete-{$menu.menu_id}" title="删除" atr-id="{$menu.menu_id}" atr-message="是否确定删除"><i></i></a>
+                        </td>
+                    </tr>
+                </volist>
+            </table>
+            </form>
+            <div class="page-box">
+                {$resPage}
+            </div>
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+</div>
+<!-- /#page-wrapper -->

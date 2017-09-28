@@ -1,0 +1,11 @@
+<header>
+    <div class="logo-box">
+        <a href="__ROOT__" class="logo-content"><img src="__PUBLIC__/images/home/logo.png" alt="logo"></a>
+    </div>
+    <ul class="nav-box clearfix">
+        <li><a href="__ROOT__" class='<if condition="$result.catId eq 0">active</if>'>首页</a></li>
+        <volist name="navs" id="nav">
+            <li><a href="__ROOT__/{$nav.m}/{$nav.c}/{$nav.f}/id/{$nav.menu_id}" <if condition=" $nav['menu_id'] eq $result['catId']">class='active'</if>>{$nav.name}</a></li>
+        </volist>
+    </ul>
+</header>

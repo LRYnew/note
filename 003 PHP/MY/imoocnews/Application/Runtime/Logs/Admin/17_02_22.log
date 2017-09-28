@@ -1,0 +1,402 @@
+[ 2017-02-22T16:38:48+08:00 ] 27.158.208.189 /imoocnews/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000670s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000648s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.000999s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002100s ]
+
+[ 2017-02-22T16:38:48+08:00 ] 27.158.208.189 /imoocnews/admin/login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000648s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000645s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.009627s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010720s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000170s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000463s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008579s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008877s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000427s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000722s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000681s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000960s ]
+
+[ 2017-02-22T16:39:02+08:00 ] 27.158.208.189 /imoocnews/admin.php/admin/login/check
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000715s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000612s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.000983s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001966s ]
+NOTIC: [2048] Declaration of Common\Model\AdminModel::find() should be compatible with that of Think\Model::find() E:\Myphp\imoocnews\Application\Common\Model\AdminModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `cms_admin` WHERE `username` = 'lry' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-02-22T16:39:09+08:00 ] 27.158.208.189 /imoocnews/admin.php/admin/login/check
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000703s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000620s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.001085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002134s ]
+NOTIC: [2048] Declaration of Common\Model\AdminModel::find() should be compatible with that of Think\Model::find() E:\Myphp\imoocnews\Application\Common\Model\AdminModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `cms_admin` WHERE `username` = 'admin' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: status E:\Myphp\imoocnews\Application\Common\Model\AdminModel.class.php 第 53 行.
+SQL: UPDATE `cms_admin` SET `lastlogintime`='1487752749' WHERE `admin_id` = 1 [ RunTime:0.0004s ]
+
+[ 2017-02-22T16:39:10+08:00 ] 27.158.208.189 /imoocnews/admin.php/admin/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000677s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000700s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.001034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002246s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::save() should be compatible with that of Think\Model::save() E:\Myphp\imoocnews\Application\Common\Model\NewsModel.class.php 第 10 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() E:\Myphp\imoocnews\Application\Common\Model\NewsModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: title E:\Myphp\imoocnews\Application\Common\Model\NewsModel.class.php 第 48 行.
+NOTIC: [8] Undefined index: catid E:\Myphp\imoocnews\Application\Common\Model\NewsModel.class.php 第 51 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2048] Declaration of Common\Model\PositionModel::find() should be compatible with that of Think\Model::find() E:\Myphp\imoocnews\Application\Common\Model\PositionModel.class.php 第 60 行.
+SQL: SHOW COLUMNS FROM `cms_position` [ RunTime:0.0017s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_position` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2048] Declaration of Common\Model\AdminModel::find() should be compatible with that of Think\Model::find() E:\Myphp\imoocnews\Application\Common\Model\AdminModel.class.php 第 86 行.
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0015s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_admin` WHERE `status` = 1 AND `lastlogintime` > 1487692800 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000166s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000446s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\Myphp\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0003s ]
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024912s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025244s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000446s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000784s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000708s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000991s ]
+
+[ 2017-02-22T16:39:13+08:00 ] 27.158.208.189 /imoocnews/admin/admin/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000688s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000662s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.001036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002181s ]
+NOTIC: [8] Undefined index: p E:\Myphp\imoocnews\Application\Admin\Controller\AdminController.class.php 第 14 行.
+NOTIC: [8] Undefined index: pagesize E:\Myphp\imoocnews\Application\Admin\Controller\AdminController.class.php 第 15 行.
+NOTIC: [2048] Declaration of Common\Model\AdminModel::find() should be compatible with that of Think\Model::find() E:\Myphp\imoocnews\Application\Common\Model\AdminModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `cms_admin` WHERE `status` <> -1 ORDER BY lastlogintime desc,admin_id desc LIMIT 0,5   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_admin` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000174s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000522s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\Myphp\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b682812e058c4f7cab74d08ab9eabe11.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b682812e058c4f7cab74d08ab9eabe11.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b682812e058c4f7cab74d08ab9eabe11.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b682812e058c4f7cab74d08ab9eabe11.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b682812e058c4f7cab74d08ab9eabe11.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b682812e058c4f7cab74d08ab9eabe11.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029692s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029973s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000509s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000783s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000678s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001104s ]
+
+[ 2017-02-22T16:39:21+08:00 ] 27.158.208.189 /imoocnews/admin.php/admin/login/checkOut
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000657s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000679s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.001020s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002159s ]
+
+[ 2017-02-22T16:39:21+08:00 ] 27.158.208.189 /imoocnews/admin.php/admin/login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000647s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000645s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.000968s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002056s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000140s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000463s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008462s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008768s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000425s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000697s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000681s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000974s ]
+
+[ 2017-02-22T16:39:26+08:00 ] 27.158.208.189 /imoocnews/admin.php/admin/login/check
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000664s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000596s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.001023s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002043s ]
+NOTIC: [2048] Declaration of Common\Model\AdminModel::find() should be compatible with that of Think\Model::find() E:\Myphp\imoocnews\Application\Common\Model\AdminModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `cms_admin` WHERE `username` = 'LRY' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-02-22T16:39:31+08:00 ] 27.158.208.189 /imoocnews/admin.php/admin/login/check
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000143s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001186s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001147s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.001825s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003597s ]
+NOTIC: [2048] Declaration of Common\Model\AdminModel::find() should be compatible with that of Think\Model::find() E:\Myphp\imoocnews\Application\Common\Model\AdminModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `cms_admin` WHERE `username` = 'LRY' LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: status E:\Myphp\imoocnews\Application\Common\Model\AdminModel.class.php 第 53 行.
+SQL: UPDATE `cms_admin` SET `lastlogintime`='1487752771' WHERE `admin_id` = 9 [ RunTime:0.0005s ]
+
+[ 2017-02-22T16:39:32+08:00 ] 27.158.208.189 /imoocnews/admin.php/admin/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000101s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001208s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001148s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.001825s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003760s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::save() should be compatible with that of Think\Model::save() E:\Myphp\imoocnews\Application\Common\Model\NewsModel.class.php 第 10 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() E:\Myphp\imoocnews\Application\Common\Model\NewsModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: title E:\Myphp\imoocnews\Application\Common\Model\NewsModel.class.php 第 48 行.
+NOTIC: [8] Undefined index: catid E:\Myphp\imoocnews\Application\Common\Model\NewsModel.class.php 第 51 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [2048] Declaration of Common\Model\PositionModel::find() should be compatible with that of Think\Model::find() E:\Myphp\imoocnews\Application\Common\Model\PositionModel.class.php 第 60 行.
+SQL: SHOW COLUMNS FROM `cms_position` [ RunTime:0.0028s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_position` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [2048] Declaration of Common\Model\AdminModel::find() should be compatible with that of Think\Model::find() E:\Myphp\imoocnews\Application\Common\Model\AdminModel.class.php 第 86 行.
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0027s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_admin` WHERE `status` = 1 AND `lastlogintime` > 1487692800 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000311s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000853s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\Myphp\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0005s ]
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042599s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043107s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000870s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001334s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001173s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001651s ]
+
+[ 2017-02-22T16:39:40+08:00 ] 27.158.208.189 /imoocnews/Admin/admin/editpassword/id/9
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000081s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000784s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000672s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.001060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002178s ]
+NOTIC: [2048] Declaration of Common\Model\AdminModel::find() should be compatible with that of Think\Model::find() E:\Myphp\imoocnews\Application\Common\Model\AdminModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `cms_admin` WHERE `admin_id` = 9 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000174s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000513s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\Myphp\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\02a7f3410b3601d578e8193e0dca178f.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\02a7f3410b3601d578e8193e0dca178f.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\02a7f3410b3601d578e8193e0dca178f.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\02a7f3410b3601d578e8193e0dca178f.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\02a7f3410b3601d578e8193e0dca178f.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\02a7f3410b3601d578e8193e0dca178f.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023476s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023795s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000476s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000789s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000700s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000979s ]
+
+[ 2017-02-22T16:39:48+08:00 ] 27.158.208.189 /imoocnews/admin/admin/editpassword
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000666s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000625s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.001052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002104s ]
+NOTIC: [2048] Declaration of Common\Model\AdminModel::find() should be compatible with that of Think\Model::find() E:\Myphp\imoocnews\Application\Common\Model\AdminModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `cms_admin` WHERE `admin_id` = 9 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: status E:\Myphp\imoocnews\Application\Common\Model\AdminModel.class.php 第 53 行.
+SQL: UPDATE `cms_admin` SET `password`='d099d126030d3207ba102efa8e60630a' WHERE `admin_id` = 9 [ RunTime:0.0003s ]
+
+[ 2017-02-22T16:39:49+08:00 ] 27.158.208.189 /imoocnews/admin/admin/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000660s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000638s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002096s ]
+NOTIC: [8] Undefined index: p E:\Myphp\imoocnews\Application\Admin\Controller\AdminController.class.php 第 14 行.
+NOTIC: [8] Undefined index: pagesize E:\Myphp\imoocnews\Application\Admin\Controller\AdminController.class.php 第 15 行.
+NOTIC: [2048] Declaration of Common\Model\AdminModel::find() should be compatible with that of Think\Model::find() E:\Myphp\imoocnews\Application\Common\Model\AdminModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `cms_admin` WHERE `status` <> -1 ORDER BY lastlogintime desc,admin_id desc LIMIT 0,5   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_admin` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000177s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000470s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\Myphp\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b682812e058c4f7cab74d08ab9eabe11.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b682812e058c4f7cab74d08ab9eabe11.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b682812e058c4f7cab74d08ab9eabe11.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b682812e058c4f7cab74d08ab9eabe11.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b682812e058c4f7cab74d08ab9eabe11.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b682812e058c4f7cab74d08ab9eabe11.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028527s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028821s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000472s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000780s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000669s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000954s ]
+
+[ 2017-02-22T16:43:07+08:00 ] 27.158.208.189 /imoocnews/admin
+ERR: Cron:cron Runat 2017-02-22 16:43:07 Use 0.056848 s
+
+[ 2017-02-22T16:43:07+08:00 ] 27.158.208.189 /imoocnews/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000711s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000647s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() E:\Myphp\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() E:\Myphp\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\PositionContentModel::find() should be compatible with that of Think\Model::find() E:\Myphp\imoocnews\Application\Common\Model\PositionContentModel.class.php 第 77 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: title E:\Myphp\imoocnews\Application\Common\Model\PositionContentModel.class.php 第 37 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` <> -1 AND `position_id` = 2 ORDER BY listorder desc,id desc LIMIT 0,20   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: title E:\Myphp\imoocnews\Application\Common\Model\PositionContentModel.class.php 第 37 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` <> -1 AND `position_id` = 3 ORDER BY listorder desc,id desc LIMIT 0,3   [ RunTime:0.0003s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::save() should be compatible with that of Think\Model::save() E:\Myphp\imoocnews\Application\Common\Model\NewsModel.class.php 第 119 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() E:\Myphp\imoocnews\Application\Common\Model\NewsModel.class.php 第 119 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: title E:\Myphp\imoocnews\Application\Common\Model\NewsModel.class.php 第 30 行.
+NOTIC: [8] Undefined index: catid E:\Myphp\imoocnews\Application\Common\Model\NewsModel.class.php 第 33 行.
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY listorder desc,news_id desc LIMIT 0,10   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: title E:\Myphp\imoocnews\Application\Common\Model\PositionContentModel.class.php 第 37 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` <> -1 AND `position_id` = 5 ORDER BY listorder desc,id desc LIMIT 0,10   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,listorder desc,news_id desc LIMIT 10   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000498s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\Myphp\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: _SESSION E:\Myphp\imoocnews\Application\Common\Common\function.php 第 29 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 24 行.
+NOTIC: [8] Undefined variable: _SESSION E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 32 行.
+NOTIC: [8] Undefined variable: _SESSION E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 34 行.
+NOTIC: [8] Undefined variable: admincount E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 68 行.
+NOTIC: [8] Undefined variable: newscount E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 86 行.
+NOTIC: [8] Undefined variable: news E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 104 行.
+NOTIC: [8] Undefined variable: news E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 112 行.
+NOTIC: [8] Undefined variable: news E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 112 行.
+NOTIC: [8] Undefined variable: positioncout E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 122 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026713s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027025s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000484s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000756s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.058892s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.060088s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: title E:\Myphp\imoocnews\Application\Common\Model\NewsModel.class.php 第 48 行.
+NOTIC: [8] Undefined index: catid E:\Myphp\imoocnews\Application\Common\Model\NewsModel.class.php 第 51 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2048] Declaration of Common\Model\PositionModel::find() should be compatible with that of Think\Model::find() E:\Myphp\imoocnews\Application\Common\Model\PositionModel.class.php 第 60 行.
+SQL: SHOW COLUMNS FROM `cms_position` [ RunTime:0.0016s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_position` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2048] Declaration of Common\Model\AdminModel::find() should be compatible with that of Think\Model::find() E:\Myphp\imoocnews\Application\Common\Model\AdminModel.class.php 第 86 行.
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0016s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_admin` WHERE `status` = 1 AND `lastlogintime` > 1487692800 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000171s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.038519s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0006s ]
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 24 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' E:\Myphp\imoocnews\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016630s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.017401s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.033562s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000843s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001124s ]
+

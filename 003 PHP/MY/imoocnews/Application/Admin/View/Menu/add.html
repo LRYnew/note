@@ -1,0 +1,68 @@
+<include file="Index/header" />
+<body>
+<div id="wrapper" class="container">
+    <include file="Index/nav"/>
+    <div id="page-wrapper" class="page-wrapper">
+        <div class="container-home">
+            <p class="breadcrumb"><i></i>平台整理指标</p>
+            <div class="form-wrapper">
+                <form method="post" class="form-box" id="form-add">
+                    <div>
+                        <label for="formTextName" class="form-label">菜单名:</label>
+                        <input type="text" name="name" class="form-text" placeholder="请填写菜单名" id="formTextName">
+                    </div>
+                    <div>
+                        <label class="form-label">菜单类型:</label>
+                        <div class="form-radio-box">
+                            <input type="radio" value="1" name="type" class="form-radio" id="form-radio-after" checked="checked"/>
+                            <label for="form-radio-after"></label>
+                        </div>
+                        <label for="form-radio-after">后台菜单</label>
+                        <div class="form-radio-box">
+                            <input type="radio" value="0" name="type" class="form-radio" id="form-radio-before"/>
+                            <label for="form-radio-before"></label>
+                        </div>
+                        <label for="form-radio-before">前端菜单</label>
+                    </div>
+                    <div>
+                        <label for="formTextM" class="form-label">模块名:</label>
+                        <input type="text" name="m" class="form-text" placeholder="模块名如admin" id="formTextM">
+                    </div>
+                    <div>
+                        <label for="formTextC" class="form-label">控制器名:</label>
+                        <input type="text" name="c" class="form-text" placeholder="控制器名如index" id="formTextC">
+                    </div>
+                    <div>
+                        <label for="formTextA" class="form-label">操作方法名:</label>
+                        <input type="text" name="f" class="form-text" placeholder="操作方法如add" id="formTextA">
+                    </div>
+                    <div>
+                        <label class="form-label">状态:</label>
+                        <div class="form-radio-box">
+                            <input type="radio" value="1" name="status" class="form-radio" id="form-radio-start" checked="checked"/>
+                            <label for="form-radio-start"></label>
+                        </div>
+                        <label for="form-radio-start">开启</label>
+                        <div class="form-radio-box">
+                            <input type="radio" value="0" name="status" class="form-radio" id="form-radio-close"/>
+                            <label for="form-radio-close"></label>
+                        </div>
+                        <label for="form-radio-close">关闭</label>
+                    </div>
+                    <div>
+                        <a href="javascript:void(0);" class="btn-submit" id="submit-add">提交</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /#page-wrapper -->
+</div>
+<include file="Index/footer"/>
+<script type="text/javascript">
+    var SCOPE = {
+        'save_url' : "/imoocnews/admin/menu/add",
+        'jump_url' : "/imoocnews/admin/menu/index",
+    }
+</script>

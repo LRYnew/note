@@ -1,0 +1,48 @@
+<include file="Index/header" />
+<body>
+<div id="wrapper" class="container">
+    <include file="Index/nav"/>
+    <div id="page-wrapper" class="page-wrapper">
+        <div class="container-home">
+            <p class="breadcrumb"><i></i>推荐位添加</p>
+            <div class="form-wrapper">
+                <form method="post" class="form-box" id="form-add">
+                    <input type="hidden" name="id" value="{$position.id}">
+                    <div>
+                        <label for="formTextName" class="form-label">推荐位名称:</label>
+                        <input type="text" value="{$position.name}" name="name" class="form-text" placeholder="请填写推荐位名称" id="formTextName">
+                    </div>
+                    <div>
+                        <label for="formTextDescription" class="form-label">推荐位描述:</label>
+                        <input type="text" value="{$position.description}" name="description" class="form-text" placeholder="请填写推荐位描述" id="formTextDescription">
+                    </div>
+                    <div>
+                        <label class="form-label">状态:</label>
+                        <div class="form-radio-box">
+                            <input type="radio" value="1" name="status" class="form-radio" id="form-radio-start" {$position.status|getChecked=1,###}/>
+                            <label for="form-radio-start"></label>
+                        </div>
+                        <label for="form-radio-start">开启</label>
+                        <div class="form-radio-box">
+                            <input type="radio" value="0" name="status" class="form-radio" id="form-radio-close" {$position.status|getChecked=0,###}/>
+                            <label for="form-radio-close"></label>
+                        </div>
+                        <label for="form-radio-close">关闭</label>
+                    </div>
+                    <div>
+                        <a href="javascript:void(0);" class="btn-submit" id="submit-add">提交</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /#page-wrapper -->
+</div>
+<include file="Index/footer"/>
+<script type="text/javascript">
+    var SCOPE = {
+        'save_url' : "/imoocnews/admin/position/add",
+        'jump_url' : "/imoocnews/admin/position/index",
+    }
+</script>

@@ -1,0 +1,41 @@
+<?php
+    $navs = D("Menu")->getAdminMenus();
+    $username = getLoginAdminUsername();
+    foreach($navs as $k => $v){
+        if($v["c"] == admin && $username != "admin"){
+            unset($navs[$k]);
+        }
+    }
+    $index = "index";
+?>
+<nav class="nav-containner" >
+    <div class="nav-header">
+        <a href="javascript:void(0)" class="nav-brand">资讯内容管理平台</a>
+        <div class="nav-right">
+            <a href="javascript:void(0)" class="nav-right-user" onclick="showlist(this)"><i class="icon"></i>{$Think.session.AdminUser.username|default=000}<b class="caret"></b></a>
+            <!--平台介绍-->
+            <ul class="nav-right-list">
+                <li><a href="__ROOT__/Admin/admin/edit/id/{$Think.session.AdminUser.admin_id}" class="nav-right-list-user"><i></i>个人中心</a></li>
+                <li class="divider"></li>
+                <li><a href="__ROOT__/Admin/admin/editpassword/id/{$Think.session.AdminUser.admin_id}" class="nav-right-list-user"><i></i>修改密码</a></li>
+                <li class="divider"></li>
+                <li><a href="/imoocnews/admin.php/admin/login/checkOut" class="nav-right-list-close"><i></i>退出</a></li>
+            </ul>
+        </div>
+        <!--登录用户信息模块-->
+    </div>
+    <!--导航顶部-->
+    <div class="menu-containner">
+        <ul class="nav-menu">
+            <li {$index|getActive}>
+                <a href="/imoocnews/admin/index/index" class="home"><i></i>首页</a>
+            </li>
+            <volist name="navs" id="nav">
+                <li {$nav.c|getActive}>
+                    <a href="/imoocnews/{$nav.m}/{$nav.c}/{$nav.f}" class="item"><i></i>{$nav.name}</a>
+                </li>
+            </volist>
+        </ul>
+    </div>
+    <!--菜单列表完成-->
+</nav>

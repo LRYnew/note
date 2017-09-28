@@ -1,0 +1,36 @@
+[ 2017-02-09T11:56:20+08:00 ] 110.82.38.94 /imoocnews/Public/css/img/uploadify-cancel.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000696s ]
+ERR: 无法加载模块:Public
+
+[ 2017-02-09T12:27:52+08:00 ] 110.82.38.94 /imoocnews/Public/css/img/uploadify-cancel.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000669s ]
+ERR: 无法加载模块:Public
+
+[ 2017-02-09T12:35:36+08:00 ] 110.82.38.94 /imoocnews/Public/css/img/uploadify-cancel.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000665s ]
+ERR: 无法加载模块:Public
+
+[ 2017-02-09T12:54:20+08:00 ] 110.82.38.94 /imoocnews/Public/css/img/uploadify-cancel.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000673s ]
+ERR: 无法加载模块:Public
+
+[ 2017-02-09T13:00:53+08:00 ] 110.82.38.94 /imoocnews/Public/css/img/uploadify-cancel.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000726s ]
+ERR: 无法加载模块:Public
+
+[ 2017-02-09T14:27:42+08:00 ] 110.82.38.94 /imoocnews/Public/css/img/uploadify-cancel.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000684s ]
+ERR: 无法加载模块:Public
+

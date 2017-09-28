@@ -1,0 +1,78 @@
+<include file="Index/header" />
+<body>
+<div id="wrapper" class="container">
+    <include file="Index/nav"/>
+    <div id="page-wrapper" class="page-wrapper">
+        <div class="container-home">
+            <p class="breadcrumb"><i></i>推荐内容添加</p>
+            <div class="form-wrapper">
+                <form method="post" class="form-box" id="form-add">
+                    <div>
+                        <label for="formTextTitle" class="form-label">标题:</label>
+                        <input type="text" name="title" class="form-text" placeholder="请填写推荐内容标题" id="formTextTitle">
+                    </div>
+                    <div>
+                        <label for="formSelectPositionId" class="form-label">选择推荐位:</label>
+                        <select class="form-select" name="position_id" id="formSelectPositionId">
+                            <foreach name="positions" item="position">
+                                <option value="{$position.id}">{$position.name}</option>
+                            </foreach>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="file_upload" class="form-label">缩略图:</label>
+                        <div class="thumb_box" style="display:inline-block;vertical-align:top;width:50%;min-width:400px;">
+                            <input id="file_upload"  type="file" multiple="true" id="file_upload">
+                            <img style="display:none" id="upload_org_code_img" src="" width="150" height="150">
+                            <input id="file_upload_image" name="thumb" type="hidden" multiple="true" value="">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="formTextUrl" class="form-label">url:</label>
+                        <input type="text" name="url" class="form-text" placeholder="请填写URL/可为空" id="formTextUrl">
+                    </div>
+                    <div>
+                        <label for="formTextNewsID" class="form-label">文章ID:</label>
+                        <input type="text" name="news_id" class="form-text" placeholder="请填写文章ID/可为空" id="formTextNewsID">
+                    </div>
+                    <div>
+                        <label class="form-label">状态:</label>
+                        <div class="form-radio-box">
+                            <input type="radio" value="1" name="status" class="form-radio" id="form-radio-start" checked="checked"/>
+                            <label for="form-radio-start"></label>
+                        </div>
+                        <label for="form-radio-start">开启</label>
+                        <div class="form-radio-box">
+                            <input type="radio" value="0" name="status" class="form-radio" id="form-radio-close"/>
+                            <label for="form-radio-close"></label>
+                        </div>
+                        <label for="form-radio-close">关闭</label>
+                    </div>
+                    <div>
+                        <a href="javascript:void(0);" class="btn-submit" id="submit-add">提交</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /#page-wrapper -->
+</div>
+<include file="Index/footer"/>
+<script src="__PUBLIC__/js/kindeditor/kindeditor-all.js"></script>
+<script src="__PUBLIC__/js/admin/image.js"></script>
+<script type="text/javascript">
+    var SCOPE = {
+        'save_url' : "/imoocnews/admin/positioncontent/add",
+        'jump_url' : "/imoocnews/admin/positioncontent/index",
+        "ajax_upload_image_url":"/imoocnews/admin/image/ajaxuploadimage",
+        "ajax_upload_swf_path":"__PUBLIC__/js/party/uploadify.swf",
+    }
+    //6.2
+    KindEditor.ready(function(K) {
+        window.editor = K.create('#editor_singcms',{
+            uploadJson : '/imoocnews/admin.php?c=image&a=kindupload',
+            afterBlur : function(){this.sync();}, //this.sync();同步KindEditor的值到textarea文本框
+        });
+    });
+</script>

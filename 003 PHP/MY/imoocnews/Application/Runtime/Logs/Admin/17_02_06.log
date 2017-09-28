@@ -1,0 +1,1753 @@
+[ 2017-02-06T09:37:45+08:00 ] ::1 /imoocnews/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000651s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000795s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001030s ]
+
+[ 2017-02-06T09:37:45+08:00 ] ::1 /imoocnews/index.php/admin/login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000825s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000855s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000996s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000122s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000277s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028929s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029117s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000590s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000715s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000873s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001005s ]
+
+[ 2017-02-06T09:37:51+08:00 ] ::1 /imoocnews/admin.php/admin/login/check
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000765s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000784s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000911s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `cms_admin` WHERE `username` = 'admin' LIMIT 1   [ RunTime:0.0008s ]
+
+[ 2017-02-06T09:37:52+08:00 ] ::1 /imoocnews/admin.php/admin/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000643s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000747s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000881s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000152s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000346s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0009s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.154624s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.154776s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000594s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000733s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000836s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000975s ]
+
+[ 2017-02-06T09:37:55+08:00 ] ::1 /imoocnews/admin/position/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000779s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000829s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000961s ]
+NOTIC: [8] Undefined index: p F:\PHPDemo\imoocnews\Application\Admin\Controller\PositionController.class.php 第 14 行.
+NOTIC: [8] Undefined index: pagesize F:\PHPDemo\imoocnews\Application\Admin\Controller\PositionController.class.php 第 15 行.
+NOTIC: [2048] Declaration of Common\Model\PositionModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\PositionModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_position` [ RunTime:0.0116s ]
+SQL: SELECT * FROM `cms_position` WHERE `status` <> -1 ORDER BY id desc LIMIT 0,5   [ RunTime:0.0012s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_position` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0031s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000295s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0008s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039364s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039516s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000819s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000947s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001007s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001136s ]
+
+[ 2017-02-06T09:37:56+08:00 ] ::1 /imoocnews/admin/basic/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000859s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000930s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001124s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000236s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000521s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0008s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057777s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057990s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000844s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000980s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001012s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001144s ]
+
+[ 2017-02-06T09:45:34+08:00 ] ::1 /imoocnews/admin/basic/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000803s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000994s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001136s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000266s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030877s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031018s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000809s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000938s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000909s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001040s ]
+
+[ 2017-02-06T09:45:53+08:00 ] ::1 /imoocnews/admin/basic/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000819s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001082s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001261s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000269s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0009s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040483s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040652s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000743s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000897s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000869s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-02-06T09:46:26+08:00 ] ::1 /imoocnews/admin/basic/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000859s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000982s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001118s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000268s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0008s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031766s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031905s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000863s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000987s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001129s ]
+
+[ 2017-02-06T09:47:13+08:00 ] ::1 /imoocnews/admin/basic/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000900s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000838s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000973s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000272s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0006s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029603s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029742s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000599s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000725s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000728s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000856s ]
+
+[ 2017-02-06T09:47:21+08:00 ] ::1 /imoocnews/admin/basic/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000667s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000870s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001017s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000270s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042328s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042467s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000741s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000869s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000804s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000936s ]
+
+[ 2017-02-06T09:47:23+08:00 ] ::1 /imoocnews/admin/basic/cache
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000724s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000794s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000929s ]
+ERR: 非法操作:cache
+
+[ 2017-02-06T09:47:56+08:00 ] ::1 /imoocnews/admin/basic/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000773s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000899s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001034s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000119s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000276s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0071s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0012s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049237s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049403s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001197s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001561s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001451s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002061s ]
+
+[ 2017-02-06T09:48:09+08:00 ] ::1 /imoocnews/admin/basic/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000757s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001104s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001266s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000117s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000271s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0006s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031278s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031416s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000686s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000815s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000806s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000936s ]
+
+[ 2017-02-06T09:49:13+08:00 ] ::1 /imoocnews/admin/basic/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001036s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000877s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001016s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000267s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0014s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041457s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041598s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000624s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000755s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000747s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000876s ]
+
+[ 2017-02-06T09:50:14+08:00 ] ::1 /imoocnews/admin/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000851s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000946s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001098s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000284s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0006s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035879s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036024s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000683s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000843s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000811s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000969s ]
+
+[ 2017-02-06T09:50:16+08:00 ] ::1 /imoocnews/admin/menu/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000971s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001007s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001212s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0058s ]
+NOTIC: [8] Undefined index: p F:\PHPDemo\imoocnews\Application\Admin\Controller\MenuController.class.php 第 24 行.
+NOTIC: [8] Undefined index: pagesize F:\PHPDemo\imoocnews\Application\Admin\Controller\MenuController.class.php 第 25 行.
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 ORDER BY listorder desc,menu_id desc LIMIT 0,5   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000323s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0009s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043527s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043678s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000810s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002319s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000785s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000935s ]
+
+[ 2017-02-06T09:52:04+08:00 ] ::1 /imoocnews/admin/basic/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000702s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000781s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000916s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000273s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0006s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032872s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033012s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000722s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000835s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000964s ]
+
+[ 2017-02-06T09:56:54+08:00 ] ::1 /imoocnews/admin/basic/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000770s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001191s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000268s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0008s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042214s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042355s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000771s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000904s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000882s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001016s ]
+
+[ 2017-02-06T10:01:46+08:00 ] ::1 /imoocnews/admin/basic/cache
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000770s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000913s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001045s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000919s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001092s ]
+
+[ 2017-02-06T10:01:54+08:00 ] ::1 /imoocnews/admin/basic/cache
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000728s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000783s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000917s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001008s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001202s ]
+
+[ 2017-02-06T10:04:00+08:00 ] ::1 /imoocnews/admin/basic/cache
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000923s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000900s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001033s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000264s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036270s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036408s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000831s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000961s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000914s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001043s ]
+
+[ 2017-02-06T10:09:53+08:00 ] ::1 /imoocnews/admin/basic/cache
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000733s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000906s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001046s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000376s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035261s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035416s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000748s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000879s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000865s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000993s ]
+
+[ 2017-02-06T10:10:31+08:00 ] ::1 /imoocnews/admin/basic/cache
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000871s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000906s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001042s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000111s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000266s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037906s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038039s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000639s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000768s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000797s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000926s ]
+
+[ 2017-02-06T10:10:41+08:00 ] ::1 /imoocnews/admin/basic/cache
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000073s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001009s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001254s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000161s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000386s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0008s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044768s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044956s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000618s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000744s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000721s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000850s ]
+
+[ 2017-02-06T10:15:49+08:00 ] ::1 /imoocnews/admin/basic/cache
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000865s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001139s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000276s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0008s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037721s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037884s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000862s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001014s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000969s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001099s ]
+
+[ 2017-02-06T10:18:45+08:00 ] ::1 /imoocnews/admin/basic/cache
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000812s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000904s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001041s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000119s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000275s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0006s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042963s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043097s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000713s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000841s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000842s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000978s ]
+
+[ 2017-02-06T10:19:05+08:00 ] ::1 /imoocnews/admin/basic/cache
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000822s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000841s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000973s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000117s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000274s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044473s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044607s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000718s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000846s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000797s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000927s ]
+
+[ 2017-02-06T10:19:20+08:00 ] ::1 /imoocnews/admin/basic/cache
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000869s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001239s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000273s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044099s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044240s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001287s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001436s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001351s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001547s ]
+
+[ 2017-02-06T10:19:36+08:00 ] ::1 /imoocnews/admin/basic/cache
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001051s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001188s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000117s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000278s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045378s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045515s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001134s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001015s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001146s ]
+
+[ 2017-02-06T10:19:58+08:00 ] ::1 /imoocnews/admin/basic/cache
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000831s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000871s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000273s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045685s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045822s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000695s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000823s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000819s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000948s ]
+
+[ 2017-02-06T10:20:16+08:00 ] ::1 /imoocnews/admin/basic/cache
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000723s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001023s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001186s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000280s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043662s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043802s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000599s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000730s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002313s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002495s ]
+
+[ 2017-02-06T10:20:46+08:00 ] ::1 /imoocnews/admin/basic/cache
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001031s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000969s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001135s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000189s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000391s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0006s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033111s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033248s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000734s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000874s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001072s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001347s ]
+
+[ 2017-02-06T10:20:52+08:00 ] ::1 /imoocnews/admin/basic/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001748s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000851s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000988s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000271s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0006s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043253s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043389s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000621s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000751s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000797s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000933s ]
+
+[ 2017-02-06T10:20:57+08:00 ] ::1 /imoocnews/admin/basic/cache
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000627s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000715s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000866s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000140s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000295s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0006s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045324s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045469s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000744s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000701s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000830s ]
+
+[ 2017-02-06T10:20:59+08:00 ] ::1 /imoocnews/admin/basic/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000790s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000886s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001042s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000275s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040337s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040475s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000742s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000870s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001109s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001244s ]
+
+[ 2017-02-06T11:31:48+08:00 ] ::1 /imoocnews/admin/basic/index
+ERR: Cron:cron Runat 2017-02-06 11:31:48 Use 0.000325 s
+
+[ 2017-02-06T11:31:48+08:00 ] ::1 /imoocnews/admin/basic/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000791s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001155s ]
+NOTIC: [2] include(./Application/Common/Cron/myplan.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory F:\PHPDemo\imoocnews\ThinkPHP\Library\Behavior\CronRunBehavior.class.php 第 44 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening './Application/Common/Cron/myplan.php' for inclusion (include_path='.;C:\php\pear') F:\PHPDemo\imoocnews\ThinkPHP\Library\Behavior\CronRunBehavior.class.php 第 44 行.
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.078537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.080112s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000204s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000561s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0008s ]
+NOTIC: [8] Undefined variable: menu F:\PHPDemo\imoocnews\Application\Runtime\Cache\Admin\bb97361d9e4731aec48331de29e1c4d1.php 第 77 行.
+NOTIC: [8] Undefined variable: menu F:\PHPDemo\imoocnews\Application\Runtime\Cache\Admin\bb97361d9e4731aec48331de29e1c4d1.php 第 82 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.079321s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079548s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000876s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001024s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001007s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001141s ]
+
+[ 2017-02-06T11:40:17+08:00 ] ::1 /imoocnews/admin/basic/index
+ERR: Cron:cron Runat 2017-02-06 11:40:17 Use 0.000304 s
+
+[ 2017-02-06T11:40:17+08:00 ] ::1 /imoocnews/admin/basic/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000255s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001300s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001072s ]
+NOTIC: [2] include(./Application/Common/Cron/myplan.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory F:\PHPDemo\imoocnews\ThinkPHP\Library\Behavior\CronRunBehavior.class.php 第 44 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening './Application/Common/Cron/myplan.php' for inclusion (include_path='.;C:\php\pear') F:\PHPDemo\imoocnews\ThinkPHP\Library\Behavior\CronRunBehavior.class.php 第 44 行.
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.004463s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005789s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000283s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: cache F:\PHPDemo\imoocnews\Application\Runtime\Cache\Admin\bb97361d9e4731aec48331de29e1c4d1.php 第 78 行.
+NOTIC: [8] Undefined index: cache F:\PHPDemo\imoocnews\Application\Runtime\Cache\Admin\bb97361d9e4731aec48331de29e1c4d1.php 第 84 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033203s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033338s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000723s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000850s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000814s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000954s ]
+
+[ 2017-02-06T11:40:20+08:00 ] ::1 /imoocnews/admin/basic/add
+ERR: Cron:cron Runat 2017-02-06 11:40:20 Use 0.000286 s
+
+[ 2017-02-06T11:40:20+08:00 ] ::1 /imoocnews/admin/basic/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000814s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000925s ]
+NOTIC: [2] include(./Application/Common/Cron/myplan.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory F:\PHPDemo\imoocnews\ThinkPHP\Library\Behavior\CronRunBehavior.class.php 第 44 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening './Application/Common/Cron/myplan.php' for inclusion (include_path='.;C:\php\pear') F:\PHPDemo\imoocnews\ThinkPHP\Library\Behavior\CronRunBehavior.class.php 第 44 行.
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.004141s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005265s ]
+
+[ 2017-02-06T11:40:23+08:00 ] ::1 /imoocnews/admin/basic/add
+ERR: Cron:cron Runat 2017-02-06 11:40:23 Use 0.000270 s
+
+[ 2017-02-06T11:40:23+08:00 ] ::1 /imoocnews/admin/basic/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000788s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000823s ]
+NOTIC: [2] include(./Application/Common/Cron/myplan.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory F:\PHPDemo\imoocnews\ThinkPHP\Library\Behavior\CronRunBehavior.class.php 第 44 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening './Application/Common/Cron/myplan.php' for inclusion (include_path='.;C:\php\pear') F:\PHPDemo\imoocnews\ThinkPHP\Library\Behavior\CronRunBehavior.class.php 第 44 行.
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.003855s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004870s ]
+
+[ 2017-02-06T11:40:57+08:00 ] ::1 /imoocnews/admin/basic/index
+ERR: Cron:cron Runat 2017-02-06 11:40:57 Use 0.000389 s
+
+[ 2017-02-06T11:40:57+08:00 ] ::1 /imoocnews/admin/basic/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000845s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000939s ]
+NOTIC: [2] include(./Application/Common/Cron/myplan.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory F:\PHPDemo\imoocnews\ThinkPHP\Library\Behavior\CronRunBehavior.class.php 第 44 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening './Application/Common/Cron/myplan.php' for inclusion (include_path='.;C:\php\pear') F:\PHPDemo\imoocnews\ThinkPHP\Library\Behavior\CronRunBehavior.class.php 第 44 行.
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.005669s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006840s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000273s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: cache F:\PHPDemo\imoocnews\Application\Runtime\Cache\Admin\bb97361d9e4731aec48331de29e1c4d1.php 第 78 行.
+NOTIC: [8] Undefined index: cache F:\PHPDemo\imoocnews\Application\Runtime\Cache\Admin\bb97361d9e4731aec48331de29e1c4d1.php 第 84 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033356s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033495s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001005s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001153s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001070s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001234s ]
+
+[ 2017-02-06T11:40:59+08:00 ] ::1 /imoocnews/admin/basic/add
+ERR: Cron:cron Runat 2017-02-06 11:40:59 Use 0.000283 s
+
+[ 2017-02-06T11:40:59+08:00 ] ::1 /imoocnews/admin/basic/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000858s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000815s ]
+NOTIC: [2] include(./Application/Common/Cron/myplan.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory F:\PHPDemo\imoocnews\ThinkPHP\Library\Behavior\CronRunBehavior.class.php 第 44 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening './Application/Common/Cron/myplan.php' for inclusion (include_path='.;C:\php\pear') F:\PHPDemo\imoocnews\ThinkPHP\Library\Behavior\CronRunBehavior.class.php 第 44 行.
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.004054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005080s ]
+
+[ 2017-02-06T11:41:05+08:00 ] ::1 /imoocnews/admin/basic/add
+ERR: Cron:cron Runat 2017-02-06 11:41:05 Use 0.000277 s
+
+[ 2017-02-06T11:41:05+08:00 ] ::1 /imoocnews/admin/basic/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000674s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001065s ]
+NOTIC: [2] include(./Application/Common/Cron/myplan.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory F:\PHPDemo\imoocnews\ThinkPHP\Library\Behavior\CronRunBehavior.class.php 第 44 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening './Application/Common/Cron/myplan.php' for inclusion (include_path='.;C:\php\pear') F:\PHPDemo\imoocnews\ThinkPHP\Library\Behavior\CronRunBehavior.class.php 第 44 行.
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.003727s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005012s ]
+
+[ 2017-02-06T11:41:24+08:00 ] ::1 /imoocnews/admin/basic/index
+ERR: Cron:cron Runat 2017-02-06 11:41:24 Use 0.000393 s
+
+[ 2017-02-06T11:41:24+08:00 ] ::1 /imoocnews/admin/basic/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001095s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001044s ]
+NOTIC: [2] include(./Application/Common/Cron/myplan.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory F:\PHPDemo\imoocnews\ThinkPHP\Library\Behavior\CronRunBehavior.class.php 第 44 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening './Application/Common/Cron/myplan.php' for inclusion (include_path='.;C:\php\pear') F:\PHPDemo\imoocnews\ThinkPHP\Library\Behavior\CronRunBehavior.class.php 第 44 行.
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.004471s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005766s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000147s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000301s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: cache F:\PHPDemo\imoocnews\Application\Runtime\Cache\Admin\bb97361d9e4731aec48331de29e1c4d1.php 第 78 行.
+NOTIC: [8] Undefined index: cache F:\PHPDemo\imoocnews\Application\Runtime\Cache\Admin\bb97361d9e4731aec48331de29e1c4d1.php 第 84 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030919s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031117s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001656s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001814s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001228s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001368s ]
+
+[ 2017-02-06T11:41:27+08:00 ] ::1 /imoocnews/admin/basic/add
+ERR: Cron:cron Runat 2017-02-06 11:41:27 Use 0.000295 s
+
+[ 2017-02-06T11:41:27+08:00 ] ::1 /imoocnews/admin/basic/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000932s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001019s ]
+NOTIC: [2] include(./Application/Common/Cron/myplan.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory F:\PHPDemo\imoocnews\ThinkPHP\Library\Behavior\CronRunBehavior.class.php 第 44 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening './Application/Common/Cron/myplan.php' for inclusion (include_path='.;C:\php\pear') F:\PHPDemo\imoocnews\ThinkPHP\Library\Behavior\CronRunBehavior.class.php 第 44 行.
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.003981s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005204s ]
+
+[ 2017-02-06T11:41:29+08:00 ] ::1 /imoocnews/admin/basic/add
+ERR: Cron:cron Runat 2017-02-06 11:41:29 Use 0.000280 s
+
+[ 2017-02-06T11:41:29+08:00 ] ::1 /imoocnews/admin/basic/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000765s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001082s ]
+NOTIC: [2] include(./Application/Common/Cron/myplan.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory F:\PHPDemo\imoocnews\ThinkPHP\Library\Behavior\CronRunBehavior.class.php 第 44 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening './Application/Common/Cron/myplan.php' for inclusion (include_path='.;C:\php\pear') F:\PHPDemo\imoocnews\ThinkPHP\Library\Behavior\CronRunBehavior.class.php 第 44 行.
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.004301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005643s ]
+
+[ 2017-02-06T11:41:31+08:00 ] ::1 /imoocnews/admin/basic/add
+ERR: Cron:cron Runat 2017-02-06 11:41:31 Use 0.000279 s
+
+[ 2017-02-06T11:41:31+08:00 ] ::1 /imoocnews/admin/basic/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001591s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000895s ]
+NOTIC: [2] include(./Application/Common/Cron/myplan.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory F:\PHPDemo\imoocnews\ThinkPHP\Library\Behavior\CronRunBehavior.class.php 第 44 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening './Application/Common/Cron/myplan.php' for inclusion (include_path='.;C:\php\pear') F:\PHPDemo\imoocnews\ThinkPHP\Library\Behavior\CronRunBehavior.class.php 第 44 行.
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.004099s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005183s ]
+
+[ 2017-02-06T11:41:48+08:00 ] ::1 /imoocnews/admin/basic/index
+ERR: Cron:cron Runat 2017-02-06 11:41:48 Use 0.000339 s
+
+[ 2017-02-06T11:41:48+08:00 ] ::1 /imoocnews/admin/basic/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000819s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001034s ]
+NOTIC: [2] include(./Application/Common/Cron/myplan.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory F:\PHPDemo\imoocnews\ThinkPHP\Library\Behavior\CronRunBehavior.class.php 第 44 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening './Application/Common/Cron/myplan.php' for inclusion (include_path='.;C:\php\pear') F:\PHPDemo\imoocnews\ThinkPHP\Library\Behavior\CronRunBehavior.class.php 第 44 行.
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.004848s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006116s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000285s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: cache F:\PHPDemo\imoocnews\Application\Runtime\Cache\Admin\bb97361d9e4731aec48331de29e1c4d1.php 第 78 行.
+NOTIC: [8] Undefined index: cache F:\PHPDemo\imoocnews\Application\Runtime\Cache\Admin\bb97361d9e4731aec48331de29e1c4d1.php 第 84 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033335s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033471s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000855s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000991s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000880s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001012s ]
+
+[ 2017-02-06T11:41:51+08:00 ] ::1 /imoocnews/admin/basic/add
+ERR: Cron:cron Runat 2017-02-06 11:41:51 Use 0.000279 s
+
+[ 2017-02-06T11:41:51+08:00 ] ::1 /imoocnews/admin/basic/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000867s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001119s ]
+NOTIC: [2] include(./Application/Common/Cron/myplan.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory F:\PHPDemo\imoocnews\ThinkPHP\Library\Behavior\CronRunBehavior.class.php 第 44 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening './Application/Common/Cron/myplan.php' for inclusion (include_path='.;C:\php\pear') F:\PHPDemo\imoocnews\ThinkPHP\Library\Behavior\CronRunBehavior.class.php 第 44 行.
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.004049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005379s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+
+[ 2017-02-06T11:41:52+08:00 ] ::1 /imoocnews/admin/basic/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000904s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000957s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.002335s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003569s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000288s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032665s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032805s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000911s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001049s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000887s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001020s ]
+
+[ 2017-02-06T11:41:54+08:00 ] ::1 /imoocnews/admin/basic/add
+ERR: Cron:cron Runat 2017-02-06 11:41:54 Use 0.000295 s
+
+[ 2017-02-06T11:41:54+08:00 ] ::1 /imoocnews/admin/basic/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000092s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000843s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000883s ]
+NOTIC: [2] include(./Application/Common/Cron/myplan.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory F:\PHPDemo\imoocnews\ThinkPHP\Library\Behavior\CronRunBehavior.class.php 第 44 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening './Application/Common/Cron/myplan.php' for inclusion (include_path='.;C:\php\pear') F:\PHPDemo\imoocnews\ThinkPHP\Library\Behavior\CronRunBehavior.class.php 第 44 行.
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.004481s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005576s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+
+[ 2017-02-06T11:41:55+08:00 ] ::1 /imoocnews/admin/basic/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000744s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000990s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.002414s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003663s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000296s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0005s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033290s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033547s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000821s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001536s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001573s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001736s ]
+
+[ 2017-02-06T11:41:58+08:00 ] ::1 /imoocnews/admin/basic/add
+ERR: Cron:cron Runat 2017-02-06 11:41:58 Use 0.000290 s
+
+[ 2017-02-06T11:41:58+08:00 ] ::1 /imoocnews/admin/basic/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000798s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000965s ]
+NOTIC: [2] include(./Application/Common/Cron/myplan.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory F:\PHPDemo\imoocnews\ThinkPHP\Library\Behavior\CronRunBehavior.class.php 第 44 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening './Application/Common/Cron/myplan.php' for inclusion (include_path='.;C:\php\pear') F:\PHPDemo\imoocnews\ThinkPHP\Library\Behavior\CronRunBehavior.class.php 第 44 行.
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.003944s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005122s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+
+[ 2017-02-06T11:41:59+08:00 ] ::1 /imoocnews/admin/basic/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000087s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001098s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.002459s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003761s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000129s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000309s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0008s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033512s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033656s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000946s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001073s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000921s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001048s ]
+
+[ 2017-02-06T11:52:11+08:00 ] ::1 /imoocnews/admin/basic/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000882s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001198s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.002325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003793s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+
+[ 2017-02-06T11:52:12+08:00 ] ::1 /imoocnews/admin/basic/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001054s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001384s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.002440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004173s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000340s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0006s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033733s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033869s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000785s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000913s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000827s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000953s ]
+
+[ 2017-02-06T13:17:39+08:00 ] ::1 /imoocnews/admin/basic/cache
+ERR: Cron:cron Runat 2017-02-06 13:17:39 Use 0.000299 s
+
+[ 2017-02-06T13:17:39+08:00 ] ::1 /imoocnews/admin/basic/cache
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000808s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000918s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000177s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000356s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0009s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.117552s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.117741s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000938s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001067s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001029s ]
+NOTIC: [2] include(./Application/Common/Cron/myplan.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory F:\PHPDemo\imoocnews\ThinkPHP\Library\Behavior\CronRunBehavior.class.php 第 44 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening './Application/Common/Cron/myplan.php' for inclusion (include_path='.;C:\php\pear') F:\PHPDemo\imoocnews\ThinkPHP\Library\Behavior\CronRunBehavior.class.php 第 44 行.
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.005175s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006478s ]
+
+[ 2017-02-06T13:17:41+08:00 ] ::1 /imoocnews/admin/basic/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000858s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001184s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001337s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000273s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0006s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034443s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034607s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000934s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001060s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000956s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.002381s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003628s ]
+
+[ 2017-02-06T13:17:51+08:00 ] ::1 /imoocnews/admin/basic/cache
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000772s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000951s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000262s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0011s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037692s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037839s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001750s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001915s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001357s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.002198s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003793s ]
+
+[ 2017-02-06T13:17:53+08:00 ] ::1 /imoocnews/admin/basic/cache
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000780s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000830s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000963s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000278s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043956s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044105s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000590s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000719s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001020s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.003863s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005140s ]
+
+[ 2017-02-06T14:39:28+08:00 ] 127.0.0.1 /imoocnews/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000897s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000890s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001053s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000176s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000344s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0006s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042917s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043070s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000592s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000724s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000707s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000837s ]
+
+[ 2017-02-06T14:44:00+08:00 ] 127.0.0.1 /imoocnews/admin/menu/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000754s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000818s ]
+NOTIC: [8] Use of undefined constant nextruntime - assumed 'nextruntime' F:\PHPDemo\imoocnews\Application\Common\Conf\crons.php 第 5 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\PositionContentModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\PositionContentModel.class.php 第 77 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0046s ]
+NOTIC: [8] Undefined index: title F:\PHPDemo\imoocnews\Application\Common\Model\PositionContentModel.class.php 第 37 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` <> -1 AND `position_id` = 2 ORDER BY listorder desc,id desc LIMIT 0,20   [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: title F:\PHPDemo\imoocnews\Application\Common\Model\PositionContentModel.class.php 第 37 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` <> -1 AND `position_id` = 3 ORDER BY listorder desc,id desc LIMIT 0,3   [ RunTime:0.0006s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\NewsModel.class.php 第 113 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\NewsModel.class.php 第 113 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0044s ]
+NOTIC: [8] Undefined index: title F:\PHPDemo\imoocnews\Application\Common\Model\NewsModel.class.php 第 30 行.
+NOTIC: [8] Undefined index: catid F:\PHPDemo\imoocnews\Application\Common\Model\NewsModel.class.php 第 33 行.
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY listorder desc,news_id desc LIMIT 0,10   [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: title F:\PHPDemo\imoocnews\Application\Common\Model\PositionContentModel.class.php 第 37 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` <> -1 AND `position_id` = 5 ORDER BY listorder desc,id desc LIMIT 0,10   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,listorder desc,news_id desc LIMIT 10   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000117s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000271s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0006s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025564s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025730s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000851s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000984s ]
+
+[ 2017-02-06T14:51:09+08:00 ] 127.0.0.1 /imoocnews/admin
+ERR: Cron:cron Runat 2017-02-06 14:51:09 Use 0.067580 s
+
+[ 2017-02-06T14:51:09+08:00 ] 127.0.0.1 /imoocnews/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000985s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001021s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\PositionContentModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\PositionContentModel.class.php 第 77 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0048s ]
+NOTIC: [8] Undefined index: title F:\PHPDemo\imoocnews\Application\Common\Model\PositionContentModel.class.php 第 37 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` <> -1 AND `position_id` = 2 ORDER BY listorder desc,id desc LIMIT 0,20   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: title F:\PHPDemo\imoocnews\Application\Common\Model\PositionContentModel.class.php 第 37 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` <> -1 AND `position_id` = 3 ORDER BY listorder desc,id desc LIMIT 0,3   [ RunTime:0.0003s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\NewsModel.class.php 第 113 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\NewsModel.class.php 第 113 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0043s ]
+NOTIC: [8] Undefined index: title F:\PHPDemo\imoocnews\Application\Common\Model\NewsModel.class.php 第 30 行.
+NOTIC: [8] Undefined index: catid F:\PHPDemo\imoocnews\Application\Common\Model\NewsModel.class.php 第 33 行.
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY listorder desc,news_id desc LIMIT 0,10   [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: title F:\PHPDemo\imoocnews\Application\Common\Model\PositionContentModel.class.php 第 37 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` <> -1 AND `position_id` = 5 ORDER BY listorder desc,id desc LIMIT 0,10   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,listorder desc,news_id desc LIMIT 10   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000288s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0006s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028637s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028784s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000850s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000982s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.072239s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.073514s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.026260s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0006s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011137s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.007433s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.017791s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001032s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001160s ]
+
+[ 2017-02-06T14:51:22+08:00 ] 127.0.0.1 /imoocnews/admin/basic/index
+ERR: Cron:cron Runat 2017-02-06 14:51:22 Use 0.071348 s
+
+[ 2017-02-06T14:51:22+08:00 ] 127.0.0.1 /imoocnews/admin/basic/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000675s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000891s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\PositionContentModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\PositionContentModel.class.php 第 77 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0042s ]
+NOTIC: [8] Undefined index: title F:\PHPDemo\imoocnews\Application\Common\Model\PositionContentModel.class.php 第 37 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` <> -1 AND `position_id` = 2 ORDER BY listorder desc,id desc LIMIT 0,20   [ RunTime:0.0015s ]
+NOTIC: [8] Undefined index: title F:\PHPDemo\imoocnews\Application\Common\Model\PositionContentModel.class.php 第 37 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` <> -1 AND `position_id` = 3 ORDER BY listorder desc,id desc LIMIT 0,3   [ RunTime:0.0007s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\NewsModel.class.php 第 113 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\NewsModel.class.php 第 113 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0046s ]
+NOTIC: [8] Undefined index: title F:\PHPDemo\imoocnews\Application\Common\Model\NewsModel.class.php 第 30 行.
+NOTIC: [8] Undefined index: catid F:\PHPDemo\imoocnews\Application\Common\Model\NewsModel.class.php 第 33 行.
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY listorder desc,news_id desc LIMIT 0,10   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: title F:\PHPDemo\imoocnews\Application\Common\Model\PositionContentModel.class.php 第 37 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` <> -1 AND `position_id` = 5 ORDER BY listorder desc,id desc LIMIT 0,10   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,listorder desc,news_id desc LIMIT 10   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000117s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000275s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0005s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022555s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022691s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000803s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000943s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.075800s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.077146s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000119s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.024749s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013909s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.007182s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.020292s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001125s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001266s ]
+
+[ 2017-02-06T14:51:24+08:00 ] 127.0.0.1 /imoocnews/admin/basic/add
+ERR: Cron:cron Runat 2017-02-06 14:51:24 Use 0.064173 s
+
+[ 2017-02-06T14:51:24+08:00 ] 127.0.0.1 /imoocnews/admin/basic/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000866s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001012s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\PositionContentModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\PositionContentModel.class.php 第 77 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0047s ]
+NOTIC: [8] Undefined index: title F:\PHPDemo\imoocnews\Application\Common\Model\PositionContentModel.class.php 第 37 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` <> -1 AND `position_id` = 2 ORDER BY listorder desc,id desc LIMIT 0,20   [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: title F:\PHPDemo\imoocnews\Application\Common\Model\PositionContentModel.class.php 第 37 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` <> -1 AND `position_id` = 3 ORDER BY listorder desc,id desc LIMIT 0,3   [ RunTime:0.0006s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\NewsModel.class.php 第 113 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\NewsModel.class.php 第 113 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0044s ]
+NOTIC: [8] Undefined index: title F:\PHPDemo\imoocnews\Application\Common\Model\NewsModel.class.php 第 30 行.
+NOTIC: [8] Undefined index: catid F:\PHPDemo\imoocnews\Application\Common\Model\NewsModel.class.php 第 33 行.
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY listorder desc,news_id desc LIMIT 0,10   [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: title F:\PHPDemo\imoocnews\Application\Common\Model\PositionContentModel.class.php 第 37 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` <> -1 AND `position_id` = 5 ORDER BY listorder desc,id desc LIMIT 0,10   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,listorder desc,news_id desc LIMIT 10   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000270s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0005s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025713s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025864s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000771s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000935s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.068702s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.070062s ]
+
+[ 2017-02-06T14:51:25+08:00 ] 127.0.0.1 /imoocnews/admin/basic/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000869s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000964s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.002588s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003779s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000305s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0006s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041473s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041660s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001124s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001294s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001305s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001507s ]
+
+[ 2017-02-06T14:51:36+08:00 ] 127.0.0.1 /imoocnews/admin/index/index
+ERR: Cron:cron Runat 2017-02-06 14:51:36 Use 0.007770 s
+
+[ 2017-02-06T14:51:36+08:00 ] 127.0.0.1 /imoocnews/admin/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000791s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000974s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.013619s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014844s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000122s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000286s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0006s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032744s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032892s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000815s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000944s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000840s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000969s ]
+
+[ 2017-02-06T14:52:01+08:00 ] 127.0.0.1 /imoocnews/admin/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000867s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000933s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+
+[ 2017-02-06T14:52:23+08:00 ] 127.0.0.1 /imoocnews/admin/basic/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001168s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000772s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.000781s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001773s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+
+[ 2017-02-06T14:52:24+08:00 ] 127.0.0.1 /imoocnews/admin/basic/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001759s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000938s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.000916s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002082s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000292s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033181s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033319s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000735s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000865s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000942s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001071s ]
+
+[ 2017-02-06T14:53:46+08:00 ] 127.0.0.1 /imoocnews/admin/index/index
+ERR: Cron:cron Runat 2017-02-06 14:53:46 Use 0.074842 s
+
+[ 2017-02-06T14:53:46+08:00 ] 127.0.0.1 /imoocnews/admin/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000956s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001209s ]
+NOTIC: [8] Use of undefined constant nextruntime - assumed 'nextruntime' F:\PHPDemo\imoocnews\Application\Common\Conf\crons.php 第 5 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\PositionContentModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\PositionContentModel.class.php 第 77 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0045s ]
+NOTIC: [8] Undefined index: title F:\PHPDemo\imoocnews\Application\Common\Model\PositionContentModel.class.php 第 37 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` <> -1 AND `position_id` = 2 ORDER BY listorder desc,id desc LIMIT 0,20   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: title F:\PHPDemo\imoocnews\Application\Common\Model\PositionContentModel.class.php 第 37 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` <> -1 AND `position_id` = 3 ORDER BY listorder desc,id desc LIMIT 0,3   [ RunTime:0.0004s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\NewsModel.class.php 第 113 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\NewsModel.class.php 第 113 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0049s ]
+NOTIC: [8] Undefined index: title F:\PHPDemo\imoocnews\Application\Common\Model\NewsModel.class.php 第 30 行.
+NOTIC: [8] Undefined index: catid F:\PHPDemo\imoocnews\Application\Common\Model\NewsModel.class.php 第 33 行.
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY listorder desc,news_id desc LIMIT 0,10   [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: title F:\PHPDemo\imoocnews\Application\Common\Model\PositionContentModel.class.php 第 37 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` <> -1 AND `position_id` = 5 ORDER BY listorder desc,id desc LIMIT 0,10   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,listorder desc,news_id desc LIMIT 10   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000296s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0005s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024262s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024403s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000854s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001031s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.080054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.081622s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000109s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.024076s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010911s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.007206s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.017229s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001108s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001242s ]
+
+[ 2017-02-06T16:41:59+08:00 ] 127.0.0.1 /imoocnews/admin
+ERR: Cron:cron Runat 2017-02-06 16:41:59 Use 0.169408 s
+
+[ 2017-02-06T16:41:59+08:00 ] 127.0.0.1 /imoocnews/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000823s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000934s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() F:\PHPDemo\imoocnews\Application\Common\Model\BasicModel.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Model\PositionContentModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\PositionContentModel.class.php 第 77 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0102s ]
+NOTIC: [8] Undefined index: title F:\PHPDemo\imoocnews\Application\Common\Model\PositionContentModel.class.php 第 37 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` <> -1 AND `position_id` = 2 ORDER BY listorder desc,id desc LIMIT 0,20   [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: title F:\PHPDemo\imoocnews\Application\Common\Model\PositionContentModel.class.php 第 37 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` <> -1 AND `position_id` = 3 ORDER BY listorder desc,id desc LIMIT 0,3   [ RunTime:0.0009s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::save() should be compatible with that of Think\Model::save() F:\PHPDemo\imoocnews\Application\Common\Model\NewsModel.class.php 第 113 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\NewsModel.class.php 第 113 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0055s ]
+NOTIC: [8] Undefined index: title F:\PHPDemo\imoocnews\Application\Common\Model\NewsModel.class.php 第 30 行.
+NOTIC: [8] Undefined index: catid F:\PHPDemo\imoocnews\Application\Common\Model\NewsModel.class.php 第 33 行.
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY listorder desc,news_id desc LIMIT 0,10   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: title F:\PHPDemo\imoocnews\Application\Common\Model\PositionContentModel.class.php 第 37 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` <> -1 AND `position_id` = 5 ORDER BY listorder desc,id desc LIMIT 0,10   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,listorder desc,news_id desc LIMIT 10   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000177s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000419s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() F:\PHPDemo\imoocnews\Application\Common\Model\MenuModel.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0008s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.111714s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.111862s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000941s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001084s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.469292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.470497s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.043154s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0008s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011969s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.021333s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.032499s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001265s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001400s ]
+
+[ 2017-02-06T16:42:09+08:00 ] 127.0.0.1 /imoocnews/admin/admin/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001014s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.002792s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004101s ]
+ERR: 非法操作:index
+

@@ -1,0 +1,84 @@
+<div id="page-wrapper" class="page-wrapper">
+    <div class="container-home clearfix">
+        <!-- Page Heading -->
+        <h1 class="page-header">
+            您好!欢迎使用资讯内容管理平台
+        </h1>
+        <p class="breadcrumb"><i></i>菜单管理</p>
+        <div class="item-wrapper item-wrapper-1">
+            <div class="item-header">
+                <div class="item-icon">
+                    <i></i>
+                </div>
+                <div class="item-content">
+                    <div class="item-count">
+                        {$admincount}
+                    </div>
+                    <p class="item-text">
+                        今日登陆用户数
+                    </p>
+                </div>
+            </div>
+            <div class="item-footer">
+                <a href="javascript:void(0);" class="clearfix"> <i></i></a>
+            </div>
+        </div>
+        <div class="item-wrapper item-wrapper-2">
+            <div class="item-header">
+                <div class="item-icon">
+                    <i></i>
+                </div>
+                <div class="item-content">
+                    <div class="item-count">
+                        {$newscount}
+                    </div>
+                    <p class="item-text">
+                        文章数量
+                    </p>
+                </div>
+            </div>
+            <div class="item-footer">
+                <a href="__ROOT__/admin/content/index" class="clearfix">查看<i></i></a>
+            </div>
+        </div>
+        <div class="item-wrapper item-wrapper-3">
+            <div class="item-header">
+                <div class="item-icon">
+                    <i></i>
+                </div>
+                <div class="item-content">
+                    <div class="item-count">
+                        {$news.count}
+                    </div>
+                    <p class="item-text">
+                        文章最大阅读数
+                    </p>
+                </div>
+            </div>
+            <div class="item-footer">
+                <a href="__ROOT__/home/detail/index/id/{$news.news_id}" class="clearfix">{$news.title}<i></i></a>
+            </div>
+        </div>
+        <div class="item-wrapper item-wrapper-4">
+            <div class="item-header">
+                <div class="item-icon">
+                    <i></i>
+                </div>
+                <div class="item-content">
+                    <div class="item-count">
+                        {$positioncout}
+                    </div>
+                    <p class="item-text">
+                        推荐位数
+                    </p>
+                </div>
+            </div>
+            <div class="item-footer">
+                <a href="__ROOT__/admin/position/index" class="clearfix">查看 <i></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- /.container-fluid -->
+</div>
+<!-- /#page-wrapper -->

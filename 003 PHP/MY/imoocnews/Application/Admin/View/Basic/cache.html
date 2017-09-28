@@ -1,0 +1,40 @@
+<include file="Index/header" />
+<body>
+<div id="wrapper" class="container">
+    <include file="Index/nav"/>
+    <div id="page-wrapper" class="page-wrapper">
+        <div class="container-home">
+            <p class="breadcrumb"><i></i>基本管理</p>
+            <include file="Basic/nav" />
+            <div class="form-wrapper">
+                <form method="post" class="form-box" id="form-cache">
+                    <div>
+                        <label for="btnCache" class="form-label">更新首页缓存:</label>
+                        <input type="button" class="btn-cache" id="btnCache" value="确定更新">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /#page-wrapper -->
+</div>
+<include file="Index/footer"/>
+<script type="text/javascript">
+    $("#btnCache").click(function(){
+        var url = "__ROOT__/home/index/build_html";
+        var jump_url = "/imoocnews/admin/basic/cache";
+        var postData = {};
+
+        $.post(url,postData,function(result){
+            if (result.status == 1){
+                //成功
+                return dialog.success(result.message,jump_url);
+            }
+            if(result.status ==0){
+                //失败
+                return dialog.error(result.message);
+            }
+        },"json");
+    });
+</script>

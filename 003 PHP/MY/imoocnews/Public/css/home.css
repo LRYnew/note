@@ -1,0 +1,442 @@
+@charset "utf-8";
+body{
+    padding:90px 20px 20px 20px;
+    background:#fff;
+}
+.wrapper{
+    width:1171px;
+    margin:0 auto;
+}
+@media only screen and (max-width:30em){
+    body{
+        padding:66px 0px 20px 0px;
+        background:#fff;
+    }
+    .wrapper{
+        width:100%;
+    }
+}
+/* ============
+   导航样式
+   ===========*/
+header{
+    width:100%;
+    min-width:800px;
+    height:66px;
+    background-color:#262626;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:10000;
+}
+header .logo-box{
+    display:inline-block;
+    padding:0px 15px;
+}
+header .nav-box{
+    display:inline-block;
+}
+header .nav-box li{
+    float:left;
+    width:62px;
+}
+header .nav-box li a{
+    display:block;
+    width:100%;
+    height:66px;
+    font:16px/66px "微软雅黑";
+    color:#fff;
+    text-align:center;
+}
+header .nav-box li a:hover{
+    border-bottom:2px solid #e54e47;
+    background-color:#212423;
+}
+header .nav-box li .active{
+    border-bottom:2px solid #e54e47;
+    background-color:#212423;
+}
+@media only screen and (max-width:30em){
+    header{
+        width:100%;
+        max-width:480px;
+    }
+    header .logo-box{
+        display:none;
+    }
+}
+/*=============
+  首页样式
+  =============*/
+.container{
+    width:72%;
+    float:left;
+}
+@media only screen and (max-width:30em){
+    .container{
+        width:100%;
+        float:none;
+    }
+}
+/*==  广告 ==*/
+.container .brand-wrapper{
+    width:100%;
+}
+.container .brand-wrapper .brand-ad{
+    float: left;
+    position: relative;
+    width:670px;
+    height:360px;
+}
+.container .brand-wrapper .brand-ad .item a{
+    display:block;
+    width:670px;
+    height:360px;
+}
+.container .brand-wrapper .brand-ad .item a img{
+    max-width: 670px;
+    width:100%;
+    height:100%;
+}
+.container .brand-wrapper .brand-rightAd{
+    float: right;
+    width: 150px;
+}
+.container .brand-wrapper .brand-rightAd ul li{
+    padding-bottom: 11px;
+}
+.container .brand-wrapper .brand-rightAd ul li a{
+    display:block;
+    width:150px;
+    height:113px;
+}
+.container .brand-wrapper .brand-rightAd ul li a img{
+    width:100%;
+    height:100%;
+}
+.owl-theme .owl-nav.disabled + .owl-dots{
+    position:relative;
+    top:-38px;
+    z-index:100;
+}
+.container .brand-wrapper .brand-ad .banner-info{
+    background: rgba(0, 0, 0, 0.3) none repeat scroll 0 0;
+    color: #fff;
+    font-size: 32px;
+    font-weight:bold;
+    height: 50px;
+    left: 50px;
+    line-height: 50px;
+    position: absolute;
+    text-align:center;
+    top:38px;
+    width:180px;
+}
+.container .brand-wrapper .brand-ad .banner-info span{
+    background: #e94d3d none repeat scroll 0 0;
+    float: left;
+    font-size: 12px;
+    font-weight: normal;
+    height: 50px;
+    text-align: center;
+    width: 50px;
+}
+@media only screen and (max-width:30em){
+    .container .brand-wrapper .brand-ad{
+        width:100%;
+        height:160px;
+    }
+    .container .brand-wrapper .brand-ad .item a{
+        width:100%;
+        height:160px;
+    }
+    .container .brand-wrapper .brand-rightAd{
+        width:100%;
+        padding:10px 0px;
+    }
+    .container .brand-wrapper .brand-rightAd ul{
+        width:100%;
+    }
+    .container .brand-wrapper .brand-rightAd ul li{
+        padding:0;
+        width:30%;
+        display:inline-block;
+    }
+    .container .brand-wrapper .brand-rightAd ul li+li{
+        margin-left:5%;
+    }
+    .container .brand-wrapper .brand-rightAd ul li a{
+        display:block;
+        width:100%;
+        height:113px;
+    }
+    .container .brand-wrapper .brand-rightAd ul li a img{
+        width:100%;
+        height:100%;
+    }
+    .container .brand-wrapper .brand-ad .banner-info{
+        font-size: 20px;
+        font-weight:bold;
+        height: 30px;
+        left:70%;
+        line-height: 30px;
+        position: absolute;
+        text-align:center;
+        top:10px;
+        width:120px;
+    }
+    .container .brand-wrapper .brand-ad .banner-info span{
+        background: #e94d3d none repeat scroll 0 0;
+        float: left;
+        font-size: 10px;
+        font-weight: normal;
+        height:30px;
+        text-align: center;
+        width:40px;
+    }
+}
+/*==  新闻列表 ==*/
+.container .news-wrapper{
+    width:100%;
+}
+.container .news-wrapper .news-item{
+    padding:38px 0px;
+    width:100%;
+    border-bottom:1px solid #ccc;
+    overflow: hidden;
+    position:relative;
+}
+.container .news-wrapper .news-item dt,.container .news-wrapper .news-item dd{
+    margin-left:220px;
+}
+.container .news-wrapper .news-item .news-title{
+    font-size: 18px;
+    line-height: 35px;
+    font-weight:700;
+}
+.container .news-wrapper .news-item .news-img{
+    position:absolute;
+    top: 38px;
+    left:0;
+    margin-left:0;
+}
+.container .news-wrapper .news-item .news-img a{
+    display:block;
+    width:200px;
+    height:120px;
+    color: #337ab7;
+    text-decoration: none;
+}
+.container .news-wrapper .news-item .news-img a img{
+    width:200px;
+    height:120px;
+}
+.container .news-wrapper .news-item .news-img a i{
+    display:block;
+    width:200px;
+    height:120px;
+    opacity: .6;
+    background:url("../images/home/movie.png") no-repeat;
+    position: absolute;
+    top:0px;
+    left:0px;
+    z-index:100;
+}
+.container .news-wrapper .news-item .news-img a i:hover{
+    opacity: .8;
+}
+.container .news-wrapper .news-item .news-intro{
+    color: #646464;
+    min-height: 60px;
+    padding-bottom: 20px;
+    font-size:16px;
+}
+.container .news-wrapper .news-item .news-info{
+    font-size:12px;
+    line-height:24px;
+}
+.container .news-wrapper .news-item .news-info span{
+    display: inline-block;
+    padding: 0 15px 0 35px;
+}
+/*===============
+  栏目页样式
+  ===============*/
+.cat .news-wrapper .news-item{
+    padding:0px 0px 38px 0px;
+}
+.cat .news-wrapper .news-item .news-img{
+    top:0px;
+}
+@media only screen and (max-width:30em){
+    .container .news-wrapper .news-item{
+        padding:15px 0px;
+    }
+    .container .news-wrapper .news-item dt,.container .news-wrapper .news-item dd{
+        margin-right:100px;
+        margin-left:0px;
+        padding:0px 10px 0px 10px;
+    }
+    .container .news-wrapper .news-item .news-title{
+        font-size:16px;
+        line-height:35px;
+        font-weight:700;
+        text-overflow:ellipsis;
+        overflow:hidden;
+        white-space:nowrap;
+        text-decoration:none;
+    }
+    .container .news-wrapper .news-item .news-img{
+        /*display:none;*/
+        position:absolute;
+        left:auto;
+        right:-105px;
+        top:20px;
+    }
+    .container .news-wrapper .news-item .news-img a{
+        display:block;
+        width:100px;
+        height:60px;
+        color: #337ab7;
+        text-decoration: none;
+    }
+    .container .news-wrapper .news-item .news-img a img{
+        width:100px;
+        height:60px;
+    }
+    .container .news-wrapper .news-item .news-img a i{
+        width:100px;
+        height:60px;
+        background:url("../images/home/movie_small.png") no-repeat;
+        left:10px;
+    }
+    .container .news-wrapper .news-item .news-intro{
+        display:none;
+        color: #646464;
+        min-height: 60px;
+        padding-bottom: 20px;
+        font-size:16px;
+    }
+    .container .news-wrapper .news-item .news-info{
+        font-size:12px;
+        line-height:18px;
+    }
+    .container .news-wrapper .news-item .news-info span{
+        display: inline-block;
+        padding: 0 10px 0 10px;
+    }
+    .page-box{
+        padding:0px 10px;
+    }
+}
+/*== 右侧区域 ==*/
+.right-area{
+    width:20%;
+    float:right;
+}
+.right-area .right-title{
+    border-bottom: 1px solid #cdcdcd;
+    padding: 5px 0;
+    text-align: center;
+}
+.right-area .right-title h3{
+    font-weight: normal;
+    line-height: 100%;
+    margin: 5px 0 0;
+    font-size: 24px;
+}
+.right-area .right-title span{
+    color: #9a9792;
+    font-size: 12px;
+}
+.right-area .right-content ul li{
+    background-position: 20px 12px;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #f3f3f3;
+    font-size: 12px;
+    padding: 14px 10px 14px 50px;
+}
+.right-area .right-content ul li.num1{
+    background-image: url("../images/home/num1.png");
+}
+.right-area .right-content ul li.num2{
+    background-image: url("../images/home/num2.png");
+}
+.right-area .right-content ul li.num3{
+    background-image: url("../images/home/num3.png");
+}
+.right-area .right-content ul li.num4{
+    background-image: url("../images/home/num4.png");
+}
+.right-area .right-content ul li.num5{
+    background-image: url("../images/home/num5.png");
+}
+.right-area .right-content ul li.num6{
+    background-image: url("../images/home/num6.png");
+}
+.right-area .right-content ul li.num7{
+    background-image: url("../images/home/num7.png");
+}
+.right-area .right-content ul li.num8{
+    background-image: url("../images/home/num8.png");
+}
+.right-area .right-content ul li.num9{
+    background-image: url("../images/home/num9.png");
+}
+.right-area .right-content ul li.num10{
+    background-image: url("../images/home/num10.png");
+}
+.right-area .right-content ul li a{
+    font-size: 16px;
+    color: #000;
+    line-height: 100%;
+    margin: 0;
+}
+.right-area .right-content ul li a:hover{
+    text-decoration:underline;
+}
+.right-area .right-content ul li .intro{
+    color: #a2a2a0;
+    padding-top:5px;
+    display: block;
+}
+.right-area .right-hot{
+    padding-top: 20px;
+}
+.right-area .right-hot a{
+    display:block;
+    width:100%;
+    height:150px;
+}
+.right-area .right-hot a img{
+    width:100%;
+    height:100%;
+}
+@media only screen and (max-width:30em){
+    .right-area{
+        display:none;
+    }
+}
+
+/* =================
+   详情页视频样式
+   =================*/
+.wrapper .container .news-wrapper .video-box{
+    width:80%;
+    margin:0 auto;
+}
+.wrapper .container .news-wrapper .video-box .news-video{
+    width:100%;
+}
+.jwlogo{display:none}
+@media only screen and (max-width:30em){
+    .detail{
+        padding:0px 10px;
+    }
+    .wrapper .container .news-wrapper .video-box{
+        width:100%;
+    }
+    .detail p img{
+        width:90%;
+    }
+}

@@ -1,0 +1,86 @@
+<div id="page-wrapper" class="page-wrapper">
+    <div class="container-home">
+        <p class="breadcrumb"><i></i>文章管理</p>
+        <div class="btn-wrapper">
+            <a href="javascript:void(0);"class="btn-add btn-listorder" id="btn-listorder"><i></i>更新排序</a>
+            <a href="javascript:void(0);"class="btn-add" id="btn-Add"><i></i>添加</a>
+            <form action="/imoocnews/admin.php/admin/content/index" method="get" class="sreach-form">
+                <span class="span-1">
+                    <label for="">栏目</label>
+                    <select name="catid" class="sreach-input" id="">
+                        <option value="">全部分类</option>
+                        <foreach name="webSiteMenu" item="sitenav">
+                            <option value="{$sitenav.menu_id}" <eq name="catid" value="$sitenav.menu_id">selected="selected"</eq>>
+                                {$sitenav.name}
+                            </option>
+                        </foreach>
+                    </select>
+                </span>
+                <span>
+                    <input type="text" name="title" value="{$title}" class="sreach-input" style="margin-left:20px;" placeholder="文章标题">
+                </span>
+                <span>
+                    <input type="submit" class="btn-submit" value="" style="margin-left:-5px;border-radius:0px;">
+                </span>
+            </form>
+            <form action="" method="" class="sreach-form">
+                <span class="span-1">
+                    <select name="position_id" class="sreach-input" id="positionId" style="min-width:170px;">
+                        <option value="0">请选择推荐位进行推送</option>
+                        <foreach name="positions" item="position">
+                            <option value="{$position.id}">{$position.name}</option>
+                        </foreach>
+                    </select>
+                </span>
+                <span>
+                    <input type="button" class="btn-position" value="推送" id="btnPosition">
+                </span>
+            </form>
+        </div>
+        <div class="table-wrapper">
+            <form id="form-table">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <th style="text-align:center;width:30px;">
+                        <input type="checkbox">
+                    </th>
+                    <th colspan="1">排序</th>
+                    <th colspan="1">id</th>
+                    <th colspan="1">标题</th>
+                    <th colspan="1">栏目</th>
+                    <th colspan="1">来源</th>
+                    <th colspan="1">封面图</th>
+                    <th colspan="1">时间</th>
+                    <th colspan="1">状态</th>
+                    <th colspan="1">操作</th>
+                </tr>
+                <volist name="news" id="new">
+                    <tr>
+                        <td style="text-align:center;width:10px;">
+                            <input type="checkbox" name="pushcheck" value="{$new.news_id}">
+                        </td>
+                        <td><input type="text" name="listorder[{$new.news_id}]" value="{$new.listorder}" size="4"/></td>
+                        <td>{$new.news_id}</td>
+                        <td>{$new.title}</td>
+                        <td>{$new.catid|getCatName=$webSiteMenu,###}</td>
+                        <td>{$new.copyfrom|getCopyFromName=###}</td>
+                        <td>{$new.thumb|isThumb}</td>
+                        <td>{$new.create_time|date="Y-m-d H:i:s",###}</td>
+                        <td><span class="btn-status" atr-id="{$new.news_id}" atr-message="是否更改状态" atr-status=<eq name="new.status" value="0">1<else/>0</eq>>{$new.status|getStatus}</span></td>
+                        <td>
+                            <a href="javascript:void(0)" class="btn-update" id="btn-Update-{$new.news_id}" title="编辑" atr-id="{$new.news_id}"><i></i></a>
+                            <a href="javascript:void(0)" class="btn-delete" id="btn-Delete-{$new.news_id}" title="删除" atr-id="{$new.news_id}" atr-message="是否确定删除"><i></i></a>
+                            <a href="__ROOT__/home/detail/view/id/{$new.news_id}" target="_blank" class="btn-view" id="btn-View-{$new.news_id}" title="预览" atr-id="{$new.news_id}"><i></i></a>
+                        </td>
+                    </tr>
+                </volist>
+            </table>
+            </form>
+            <div class="page-box">
+                {$resPage}
+            </div>
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+</div>
+<!-- /#page-wrapper -->

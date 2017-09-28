@@ -1,0 +1,59 @@
+<include file="Index/header"/>
+<include file="Index/nav"/>
+<div class="wrapper clearfix">
+    <div class="container detail">
+        <div class="news-wrapper">
+            <h1 style="text-align:center">{$result.new.title}</h1>
+            <notempty name ="result.new.video">
+                <div class="video-box">
+                    <!--<video controls class="news-video">-->
+                        <!--<source src="{$result.new.video}" type="video/mp4">-->
+                        <!--您的浏览器不支持该视频播放。-->
+                    <!--</video>-->
+                    <div id="mediaplayer" class="mediaplayer"></div>
+                </div>
+            </notempty>
+            {$result.new.content}
+        </div>
+        <!--新闻内容结束-->
+    </div>
+    <include file="Index/right"/>
+</div>
+<!--[if IE]>
+<script type="text/javascript" src="__PUBLIC__/js/party/jwplayer/jwplayer.html5.js"></script>
+<![endif]-->
+<script type="text/javascript" src="__PUBLIC__/js/party/jwplayer/jwplayer.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/party/jwplayer/jwpsrv.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+            items:1,                       //幻灯片每页可见个数
+            loop: true,
+            autoplay: true,                 //自动播放，可选布尔值或整数，若使用整数，如 3000，表示 3 秒切换一次；若设置为 true，默认 5 秒切换一次
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true
+        });
+
+        var image = "{$result.new.thumb}";
+        var file = "{$result.new.video}";
+        var swf ="__PUBLIC__/js/party/jwplayer/jwplayer.flash.swf";
+        jwplayer('mediaplayer').setup({
+            'flashplayer':swf,
+            'image':image,
+            'id': 'playerID',
+            'width': '100%',
+            //'height':'400',
+            'aspectratio':'10:6',    //自适应宽高比例，如果设置宽高比，可设置宽度100%,高度不用设置
+            'file':file,
+            'controlbar':"over",
+            'repeat':"always",
+            'screencolor':"#fff",
+            // 'autostart':'true',
+            'enablejs':'true',
+            'rotatetime':'10',
+            "repeat":false,
+            //'displayheight':'400px'
+        });
+    });
+</script>
+<include file="Index/footer"/>

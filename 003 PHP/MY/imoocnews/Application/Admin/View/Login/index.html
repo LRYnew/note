@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html,charset=UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name = "format-detection" content="telephone = no" />
+    <title>资讯内容管理平台-登录</title>
+    <import type="css" file="css.normalize"/>
+    <import type="css" file="css.main"/>
+</head>
+<body style="background:#fff;">
+<div class="container">
+    <form method="post" action="" enctype="multipart/form-data" class="form-login">
+    	<h2>请登录</h2>
+    	<input type="text" name="username" class="username" placeholder="请输入账号">
+    	<br/>
+    	<input type="password" name="password" class="password" placeholder="请输入密码">
+    	<br/>
+    	<button type="button" class="login-btn" onclick="login.check()">登录</button>
+    </form>
+</div>
+</body>
+<!--引用js-->
+<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+<import file="js.dialog.layer" />
+<import file="js.dialog" />
+<import file="js.admin.login" />
+</html>

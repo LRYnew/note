@@ -1,0 +1,40 @@
+<div id="page-wrapper" class="page-wrapper">
+    <div class="container-home">
+        <p class="breadcrumb"><i></i>用户管理管理</p>
+        <div class="btn-wrapper">
+            <a href="javascript:void(0);"class="btn-add" id="btn-Add"><i></i>添加</a>
+        </div>
+        <div class="table-wrapper">
+            <form id="form-table">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <th colspan="1">id</th>
+                    <th colspan="1">用户名</th>
+                    <th colspan="1">真实姓名</th>
+                    <th colspan="1">最后登录时间</th>
+                    <th colspan="1">状态</th>
+                    <th colspan="1">操作</th>
+                </tr>
+                <volist name="users" id="user">
+                    <tr>
+                        <td>{$user.admin_id}</td>
+                        <td>{$user.username}</td>
+                        <td>{$user.realname}</td>
+                        <td>{$user.lastlogintime|date="Y-m-d H:i:s",###}</td>
+                        <td><span class="btn-status" atr-id="{$user.admin_id}" atr-message="是否更改状态" atr-status=<eq name="user.status" value="0">1<else/>0</eq>>{$user.status|getStatus}</span></td>
+                        <td>
+                            <!--<a href="javascript:void(0)" class="btn-update" id="btn-Update-{$user.admin_id}" title="编辑" atr-id="{$user.admin_id}"><i></i></a>-->
+                            <a href="javascript:void(0)" class="btn-delete" id="btn-Delete-{$user.admin_id}" title="删除" atr-id="{$user.admin_id}" atr-message="是否确定删除"><i></i></a>
+                        </td>
+                    </tr>
+                </volist>
+            </table>
+            </form>
+            <div class="page-box">
+                {$resPage}
+            </div>
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+</div>
+<!-- /#page-wrapper -->

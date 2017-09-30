@@ -11,11 +11,8 @@ Person.prototype.sayName = function() {
 var person1 = new Person();
 var person2 = new Person();
 
-person1.name = 'WritdJob';
+//person1.name = 'WriteJob';
 
-console.log(person1.name); //WritdJob
-console.log(person2.name); //YJob
-
-delete person1.name;
-
-console.log(person1.name); //YJob
+for(var prop in person1) {
+  console.log(prop);
+}

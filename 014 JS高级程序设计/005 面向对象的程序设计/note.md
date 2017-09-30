@@ -348,4 +348,80 @@ delete person1.name;
 console.log(person1.name); //YJob
 ```
 
-> hasOwnProperty()方法
+> hasOwnProperty()方法可以检测一个属性是存在于实例中，还是原型中（此方法从Object方法中继承）。此方法只在给定属性存在于对象实例中，才会返回true。
+```
+function Person() {};
+
+Person.prototype.name = 'YJob';
+Person.prototype.age = 27;
+Person.prototype.job = '前端';
+
+Person.prototype.sayName = function() {
+  console.log(this.name);
+}
+
+var person1 = new Person();
+var person2 = new Person();
+
+console.log(person1.hasOwnProperty('name'));   // false
+
+person1.name = 'WriteJob';
+
+console.log(person1.hasOwnProperty('name'));   // true
+```
+
+### 2.3.2 原型和in操作符
+
+有两种方式使用in操作符，单独使用和for-in循环使用。
+
+> in操作符会通过对象访问给定属性时返回true，无论是在对象实例中还是原型对象中（区别），都会返回true。
+```
+var person1 = new Person();
+var person2 = new Person();
+
+console.log(person1.hasOwnProperty('name'));  //false
+console.log('name' in person1);               //true
+person1.name = 'WriteJob';
+
+console.log(person1.hasOwnProperty('name'));  //true
+console.log('name' in person1);               //true
+```
+
+> for-in循环使用。返回的是所有能通过对象访问的、可枚举(enumerable)的属性。其中即包括实例对象中的属性，也包括存在于原型中的属性。屏蔽了原型中不可枚举属性的实例属性也会在for-in循环中返回，因为根据规定，所有开发人员定义的属性都是可枚举的， —— IE8及更早版本除外。
+```
+var o = {
+  toString: function () {
+    return "My Object";
+  }
+};
+
+for (var prop in o) {
+  if (prop == 'toString') {
+    console.log('Found toString');
+  }
+}
+// 'Found toString'
+```
+以上代码 o 对象定义了一个toString()方法，该方法屏蔽了原型中(不可枚举)的toSting()方法。
+
+```
+//test
+function Person() {};
+
+Person.prototype.name = 'YJob';
+Person.prototype.age = 27;
+Person.prototype.job = '前端';
+
+Person.prototype.sayName = function() {
+  console.log(this.name);
+}
+
+var person1 = new Person();
+var person2 = new Person();
+
+//person1.name = 'WriteJob';
+
+for(var prop in person1) {
+  console.log(prop);
+}
+```

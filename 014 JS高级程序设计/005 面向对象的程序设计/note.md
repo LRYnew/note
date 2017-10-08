@@ -284,7 +284,7 @@ console.log(person1.sayName === person2.sayName); //true
 
 ### 2.3.1 理解原型对象
 
-所有个原型对象都有一个constructor(构造函数)属性，这个函数指向prototype属性**所在函数**的指针。
+所有个原型对象都有一个constructor(构造函数)属性，这个属性指向prototype属性**所在函数**的指针。
 !['prototype图'](./img/prototype.png)
 
 可以通过isPrototypeOf()来确定对象之间是否存在关系。
@@ -387,7 +387,7 @@ console.log(person1.hasOwnProperty('name'));  //true
 console.log('name' in person1);               //true
 ```
 
-> for-in循环使用。返回的是所有能通过对象访问的、可枚举(enumerable)的属性。其中即包括实例对象中的属性，也包括存在于原型中的属性。屏蔽了原型中不可枚举属性的实例属性也会在for-in循环中返回，因为根据规定，所有开发人员定义的属性都是可枚举的， —— IE8及更早版本除外。
+> for-in循环使用。返回的是所有能通过对象访问的、可枚举(enumerable)的属性。其中即包括**实例对象中**的属性，也包括存在于原型中的属性。屏蔽了原型中不可枚举属性的实例属性也会在for-in循环中返回，因为根据规定，所有开发人员定义的属性都是可枚举的， —— IE8及更早版本除外。
 ```
 var o = {
   toString: function () {
@@ -419,9 +419,118 @@ Person.prototype.sayName = function() {
 var person1 = new Person();
 var person2 = new Person();
 
-//person1.name = 'WriteJob';
+person1.name = 'WriteJob';
 
 for(var prop in person1) {
   console.log(prop);
 }
+
+// name属性虽然再原型和实例中都有定义，但只会输出一次。
 ```
+
+> ES5 Object.keys()方法，接收一个参数，返回一个包含所有可枚举的属性名的字符串**数组**(不包括原型)。
+
+> ES6 新增 Object.values() 和 Object.ertries()
+
+> Object.getOwnPropertyNames(),接收一个参数，返回对象所有属性(包括不可枚举，不包括原型)。
+
+### 2.3.3 更简单的原型语法
+
+前面例子每添加一个属性和方法就要敲一遍Person.prototype。减少不必要的操作，常见做法是用一个包含所有属性和方法的对象字面量来重写整个原型对象。
+```
+function Person() {}
+
+Person.prototype = {             // 完全重写
+  name:'YJob',
+  age:29,
+  job:'前端',
+  sayName: function() {
+    console.log(this.name);
+  }
+}
+```
+以上代码等于重写原型对象，但有个问题:constructor属性不再指向Person了。因为相当于重写了prototype对象，因此constructor属性也变成了新对象的constructor属性(指向Object构造函数)。
+> instanceof 操作符还能返回正确的结果，但通过constructor属性已经无法确定对象的类型。
+```
+var person1 = new Person();
+console.log(person1 instanceof Person);         //true
+console.log(person1 instanceof Object);         //true
+
+console.log(person1.constructor === Person);    //true
+console.log(person1.constructor === Object);    //true
+```
+如果constructor的值真的重要，通过以下方法设置适当的值。
+```
+function Person() {}
+
+Person.prototype = {             // 完全重写
+  constructor: Person,           // 设置回原构造函数
+  name:'YJob',
+  age:29,
+  job:'前端',
+  sayName: function() {
+    console.log(this.name);
+  }
+}
+```
+以上方式设置的constructor会导致他的特性 [[Enumerable]]被设置为true。
+
+### 2.3.4 原型的动态性
+由于在原型中查找值的过程是一个次搜索。因此我们对原型对象的所有修改都立即从实例上反映出来————即使先创建实例，在修改原型对象值，也会在实例上反映出来。
+```
+// Test
+function Person() {}
+
+var friend = new Person();
+
+Person.prototype.sayName = function() {
+  console.log(this.name);
+}
+
+friend.name = 'YJob';
+
+friend.sayName();      //YJob
+```
+```
+// Test
+function Person() {}
+
+var friend = new Person();
+
+Person.prototype.sayName = function() {
+  console.log(this.name);
+}
+
+friend.sayName();      //undefined
+
+friend.name = 'YJob';
+```
+
+> 如果是重写整个原型对象，就无法实现动态原型。重写原型切断现有原型与任何之前已经存在的对象实例之间的联系。
+```
+function Person() { }
+
+var friend = new Person();
+
+Person.prototype = {
+  name: 'YJob',
+  sayName: function() {
+    console.log(this.name);
+  }
+}
+
+friend.name = 'YJob';
+
+friend.sayName();   //error
+```
+!['重写原型'](./img/重写原型.png)
+
+### 2.3.5 原生对象的原型
+
+### 2.3.6 原型对象的问题
+
+缺点:
+
+- 省略了为构造函数传递初始化参数的环节，导致所有实例在默认情况下都将取得相同的属性值。
+
+- 原型中所有属性都被实例共享。

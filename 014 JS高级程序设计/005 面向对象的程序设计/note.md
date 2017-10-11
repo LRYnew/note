@@ -534,3 +534,261 @@ friend.sayName();   //error
 - 省略了为构造函数传递初始化参数的环节，导致所有实例在默认情况下都将取得相同的属性值。
 
 - 原型中所有属性都被实例共享。
+```
+function Person() { }
+
+Person.prototype = {
+  name: 'YJob',
+  friends: ['YJob','WriteJob'],   //引用类型
+  sayName: function() {
+    console.log(this.name);
+  }
+}
+
+var person1 = new Person();
+var person2 = new Person();
+
+person1.friends.push('YI');
+
+console.log(person1.friends);   //
+console.log(person2.friends);   //
+console.log(person2.friends === person1.friends); //true
+```
+
+# 3. 继承
+
+## 3.1 原型链
+```
+function SuperType() {
+  this.property = true;
+}
+
+SuperType.prototype.getSuperValue = function() {
+  return this.property;
+}
+
+function SubType() {
+  this.subProperty = false;
+}
+
+// 继承
+SubType.prototype = new SuperType();
+
+SubType.prototype.getSubValue = function() {
+  return this.subProperty;
+}
+
+var instance = new SubType();
+
+console.log(instance.getSuperValue);
+console.log(instance.getSubValue);
+```
+!['原型链'](./img/完成原型链.png)
+
+### 3.1.1 原型链的问题
+
+- 包含引用类型的原型
+```
+function SuperType() {
+  this.property = true;
+  this.color = ['red','blue','green'];
+}
+
+SuperType.prototype.getSuperValue = function() {
+  return this.color;
+}
+
+function SubType() {
+  this.subProperty = false;
+}
+
+// 继承
+SubType.prototype = new SuperType();
+
+var instance = new SubType();
+
+instance.color.push('yellow');
+
+var instance2 = new SubType();
+
+console.log(instance.color);  //["red", "blue", "green", "yellow"]
+console.log(instance2.color); //["red", "blue", "green", "yellow"]
+```
+
+- 创建子类型实例时，无法向超类型的构造函数中传递参数。没有办法在不影响所有对象实例的情况下，给超类型的构造函数传递参数。
+
+## 3.2 借用构造函数（解决原型链中包含引用类型属性的问题），也称伪造对象或者经典继承
+
+> 在子类型中构造函数的内部调用超类型构造函数。通过使用call和apply方法在新创建的对象上执行构造函数。
+```
+function SuperType() {
+  this.property = true;
+  this.color = ['red','blue','green'];
+}
+
+function SubType() {
+  SuperType.call(this);
+}
+
+var instance = new SubType();
+
+instance.color.push('yellow');
+
+var instance2 = new SubType();
+
+console.log(instance.color); //["red", "blue", "green", "yellow"]
+console.log(instance2.color);//["red", "blue", "green"]
+```
+
+- 可传递参数
+```
+function SuperType(name) {
+  this.property = true;
+  this.color = ['red','blue','green'];
+  this.name = name;
+}
+
+function SubType(age) {
+  SuperType.call(this,'YJob');
+  this.age = age;
+}
+
+var instance = new SubType(27);
+
+console.log(instance.name,instance.age);// YJob 27
+```
+
+- 借用构造函数的问题：如果仅仅使用“借用构造函数模式”，无法避免构造函数的问题。同一方法，创建实例会重复定义。
+
+## 3.3 组合继承 - 伪经典继承
+
+> 指将**原型链**和**借用构造函数**组合到一块，组合使用的技术。使用原型链实现原型属性和方法的继承，使用借用构造函数实现实例属性的继承。
+```
+function SuperType(name) {
+  this.name = name;
+  this.colors = ['red', 'blue', 'black', 'white'];
+}
+
+SuperType.prototype.sayName = function () {
+  console.log(this.name);
+}
+SuperType.prototype.sayAge = function () {
+  console.log(this.age);
+}
+
+function SubType(name, age) {
+  SuperType.call(this,name);
+  this.age = age;
+}
+
+SubType.prototype = new SuperType();
+
+var instance = new SubType('YJob',27);
+var instance2 = new SubType();
+
+instance.colors.push('yellow','green');
+
+instance.sayName();
+instance.sayAge();
+console.log(instance.colors); //["red", "blue", "black", "white", "yellow", "green"]
+console.log(instance2.colors);//["red", "blue", "black", "white"]
+```
+
+组合继承避免了原型链和借用构造函数的缺陷。成为了JavaScript最常用的继承模型。使用instance和isPrototypeOf能识别使用组合继承的对象。
+
+## 3.4 原型式继承
+> 没有严格意义上的构造函数，借助原型基于已有的对象创建新对象，同时还不必因此创建自定义类型。如下：
+```
+function object(o) {
+  function F(){};
+  F.prototype = o;
+  return new F();
+}
+
+var person = {
+  name:'YJob',
+  friends: ['待等等','宇']
+}
+
+var anotherPerson = object(person);
+
+anotherPerson.name = 'WriteJob';
+
+anotherPerson.friends.push('git');
+
+var yesAnotherPerson = object(person);
+
+yesAnotherPerson.name = '99YOU';
+
+yesAnotherPerson.friends.push('vue');
+
+console.log(person.name);              //YJob
+console.log(anotherPerson.name);       //WriteJob
+console.log(yesAnotherPerson.name);    //99YOU
+console.log(person.friends);           // ["待等等", "宇", "git", "vue"],因为定义在原型内，所以引用类型共享了
+```
+
+> ES5通过新增Object.create()方法规范了原型式继承。接收两个参数:一个用作新对象原型的对象和一个为新对象定义额外属性的对象（可选）。在只传入一个参数的情况下，Object.create() 的行为和上面object函数的行为相同。
+```
+var person = {
+  name: 'YJob',
+  friends: ['JavaScript','Vue','Html']
+}
+
+var anotherPerson = Object.create(person);
+
+anotherPerson.name = 'WriteJob';
+anotherPerson.friends.push('966');
+
+var yesAnotherPerson = Object.create(person);
+
+yesAnotherPerson.name = 'JobWhy';
+yesAnotherPerson.friends.push('Ycan');
+
+console.log(person.friends); //["JavaScript", "Vue", "Html", "966", "Ycan"]
+console.log(person.name);    //YJob
+console.log(anotherPerson.friends);
+console.log(anotherPerson.name); //966
+console.log(yesAnotherPerson.friends);
+console.log(yesAnotherPerson.name); //Ycan
+```
+
+> Object.create()的第二个参与与 Object.defineProperties()的第二个参数类似。每个属性都通过自己的描述符定义。以这种方式指定的任何属性都会覆盖原型对象上的同名属性。
+```
+var person = {
+  name: 'YJob',
+  friends: ['JavaScript','Vue','Html']
+}
+
+var anotherPerson = Object.create(person,{
+  name: {
+    value: 'WriteJob'
+  },
+  friends: {
+    value: ['CSS','jQuery']
+  }
+});
+
+anotherPerson.name = '977';
+anotherPerson.friends.push('R'); 
+
+var yesAnotherPerson = Object.create(person,{
+  name: {
+    value: 'WhyJob'
+  }
+});
+
+yesAnotherPerson.name = 'JaCK';
+yesAnotherPerson.friends.push('another'); 
+
+console.log(person.name);                 //YJob
+console.log(person.friends);              //["JavaScript", "Vue", "Html", "another"]
+
+console.log(anotherPerson.name);          //WriteJob
+console.log(anotherPerson.friends);       //["CSS", "jQuery", "R"]，有定义，覆盖了原来的同名数组
+
+console.log(yesAnotherPerson.name);       //WhyJob
+console.log(yesAnotherPerson.friends);    //["JavaScript", "Vue", "Html", "another"]
+```
+
+## 3.5 寄生式继承

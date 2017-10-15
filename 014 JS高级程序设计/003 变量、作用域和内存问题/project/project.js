@@ -1,34 +1,30 @@
-var person = {
-  name: 'YJob',
-  friends: ['JavaScript','Vue','Html']
+function inheritPrototype(subType,superType) {
+  var prototype = Object.create(superType.prototype);   //创建对象，用于重写原型
+  prototype.constructor = subType;               //指定原型的构造对象
+  subType.prototype = prototype;                 //重写子类型原型
 }
 
-var anotherPerson = Object.create(person,{
-  name: {
-    value: 'WriteJob'
-  },
-  friends: {
-    value: ['CSS','jQuery']
-  }
-});
+function SuperType(name) {
+  this.name = name;
+  this.colors = ['white','black'];
+}
+//
+SuperType.prototype.sayName = function() {
+  console.log(this.name);
+}
+//
+function SubType(name,age) {
+  SuperType.call(this,name);
+  this.age = age;
+}
+//
+inheritPrototype(SubType,SuperType);
+SubType.prototype.sayAge = function(){       //需写在继承函数后面
+  console.log(this.age);
+}
 
-anotherPerson.name = '977';
-anotherPerson.friends.push('R'); 
+var person = new SubType('YJob',27);
 
-var yesAnotherPerson = Object.create(person,{
-  name: {
-    value: 'WhyJob'
-  }
-});
-
-yesAnotherPerson.name = 'JaCK';
-yesAnotherPerson.friends.push('another'); 
-
-console.log(person.name);                 //YJob
-console.log(person.friends);              //["JavaScript", "Vue", "Html", "another"]
-
-console.log(anotherPerson.name);          //WriteJob
-console.log(anotherPerson.friends);       //["CSS", "jQuery", "R"]
-
-console.log(yesAnotherPerson.name);       //WhyJob
-console.log(yesAnotherPerson.friends);    //["JavaScript", "Vue", "Html", "another"]
+person.sayName();
+console.log(person.age);
+person.sayAge();

@@ -79,3 +79,20 @@ console.log(anotherFactorial(4));
 
 # 2. 闭包
 > 闭包:有权访问**另一个函数作用域的变量**的函数。常见方式，在一个函数内部创建另一个函数。
+```
+function createFunction(propertyName) {     //根据对象的某项共同属性进行重排序
+  return function(object1, object2) {
+    var value1 = object1[propertyName];
+    var value2 = object1[propertyName];
+  }
+  if(value1 < value2) {
+    return -1;
+  } else if(value1 > value2) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
+```
+
+> 作用域链的本质:指向变量对象的指针列表。只引用，不包含实际变量。无论什么时候再函数内访问一个变量时，就会从作用域链中**搜索**具有相应名字的变量。一般来讲，当函数执行完毕，局部活动对象会被销毁，内存中仅保存全局作用域对象。**闭包的情况又有所不同**

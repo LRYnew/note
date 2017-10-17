@@ -1,11 +1,13 @@
-var factorial = (function f(num) {
-  if(num <= 1) {
+function createFunction(propertyName) {
+  return function(object1, object2) {
+    var value1 = object1[propertyName];
+    var value2 = object1[propertyName];
+  }
+  if(value1 < value2) {
+    return -1;
+  } else if(value1 > value2) {
     return 1;
   } else {
-    return num * f(num -1);
+    return 0;
   }
-})
-
-var anotherFactorial = factorial;
-factorial = null;
-console.log(anotherFactorial(4));
+}

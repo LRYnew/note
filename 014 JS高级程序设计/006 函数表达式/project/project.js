@@ -1,13 +1,9 @@
-function createFunction(propertyName) {
-  return function(object1, object2) {
-    var value1 = object1[propertyName];
-    var value2 = object1[propertyName];
+function f() {
+  for(let i =0;i<5;i++) {
+    console.log(i)
   }
-  if(value1 < value2) {
-    return -1;
-  } else if(value1 > value2) {
-    return 1;
-  } else {
-    return 0;
-  }
+  var i;
+  console.log(i);    //循环外也可以使用。
 }
+
+f();

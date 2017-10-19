@@ -247,3 +247,128 @@ function add(num1,num2) {
 如果以上函数创建一个闭包，那么闭包通过自己的作用域链可以访问这些变量。利用这点，就可以创建访问私有变量的公有方法。把有权访问私有变量和私有函数的方法称为“特权方法”。创建方式有两种:
 
 - 在构造函数中定义特权方法
+```
+function MyObject() {
+  // 私有变量
+  var privateVariable = 10;
+
+  // 私有函数
+  function privateFunction() {
+    return false;
+  }
+  // 特权方法
+  this.publicMethod = function () {
+    privateVariable++;
+    return privateFunction();
+  };
+};
+```
+在构造函数内创建私有变量和私有函数，然后又创建了能访问这些私有成员的特权方法。能够在构造函数中定义特权方法是因为特权方法作为闭包有权访问在构造函数中定义的所以变量和函数。以上例子中，privateVariable和privateFunction()只能通过特权方法privateMethod访问(创建实例后)。
+
+利用私有和特权成员，可以隐藏那些不应该被直接修改的数据，如:
+```
+function Person(name) {
+  this.getName = function() {
+    return name;
+  };
+  this.setName = function(val) {
+    name = val;
+  };
+};
+
+var person = new Person('YJob');
+
+console.log(person.name);              //undefined
+console.log(person.getName());         //YJob
+
+person.setName('WriteJob');            
+console.log(person.name);              //undefined
+console.log(person.getName());         //WriteJob
+```
+> 特别注意:构造函数统一缺点,每次实例都会创建同一组方法。使用静态私有变量来实现特权方法避免问题。
+
+## 4.1 静态私有变量
+
+通过在私有作用域定义私有变量和函数，同样可以创建特权方法，基本模式如下:
+```
+(function(){
+  //私有变量
+  var privateVariable = 10;
+  //私有函数
+  function privateFunction() {
+    return false;
+  }
+  //构造函数
+  MyObject = function() {};        //MyObject未声明，在全局作用域下可以访问到。重点
+
+  //公有、特权方法
+  MyObject.prototype.publicMethod = function() {
+    privateVariable++;
+    return privateFunction();
+  }
+})();
+```
+此模式与构造函数模式的主要区别在于:私有变量和函数是由实例共享的。由于特权方法定义在原型上，因此所有实例都使用同一个函数。而这个特权方法作为一个闭包，总是包含着对外部作用域的引用。
+```
+(function () {
+  // 私有变量
+  var name = '';            //不定义，下方的name会成为全局变量
+
+  //构造函数
+  Person = function(val) {
+    name = val;
+  };
+
+  //特权方法
+  Person.prototype.getName = function() {
+    return name;
+  }
+
+  Person.prototype.setName = function(val) {
+    name = val;
+  }
+})();
+
+var person1 = new Person('WriteJob');
+console.log(person1.getName());          //WriteJob
+
+var person2 = new Person();
+console.log(person2.getName());          //undefined
+
+person2.setName('WhyJob');
+console.log(person1.getName());          //WhyJob
+console.log(person2.getName());          //WhyJob
+```
+以上示例，变量name变成一个静态的、所有实例都共享的属性。即：在某一个实例上调用setName()会影响所有实例。而调用setName()或新建一个Person实例会赋予name属性一个新值，所有的实例的name属性都会返回相同的值。
+
+## 4.2 模块模式
+
+> 模块模式:为单例创建私有变量和方法。所谓单例指只有一个实例的对象。Javascript通常以对象字面量创建单例。
+```
+var singleton = {
+  name:'',
+  method:function() {
+    //函数体
+  }
+}
+```
+
+模块模式通过为单例添加私有变量和特权方法能够使其得到增强，语法形式如下:
+```
+var singleton = function() {
+  // 私有变量 和 函数
+  var privateVariable = 10;
+  function privateFunction() {
+    return false;
+  }
+
+  // 公有、特权方法
+  return {
+    publicProperty:true,
+    publicFunction:function() {
+      privateVariable++;
+      return privateFunction();
+    }
+  }
+}();                           //最后的括号
+```

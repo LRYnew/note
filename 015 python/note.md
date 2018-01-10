@@ -271,5 +271,60 @@ print sum / 4
 # while 条件:
 #     循环体
 
-YJob
+# 100 以内奇数之和
+# 方式一: 自己想
+sum = 0
+x = 1
+while x < 100:
+    if x%2 == 1:
+        sum+=x
+    x+=1
+print sum
+
+# 方式二: 提供
+sum = 0
+x = 1
+while x < 100:
+    sum+=x
+    x+=2
+print sum
+```
+
+## 3.6 break 退出循环
+```
+# 计算 1 + 2 + 4 + 8 + 16 + ... 的前20项的和
+sum = 0
+x = 1
+n = 1
+while True:
+    if n > 20:
+        break
+    sum = sum + x
+    x = x * 2
+    n = n + 1
+print sum
+```
+
+## 3.7 continue 退出循环
+```
+sum = 0
+x = 0
+while True:
+    x = x + 1
+    if x > 100:
+        break
+    if x % 2==0:
+        continue
+    sum = sum+x
+print sum
+```
+
+## 3.8 嵌套循环
+```
+# 对100以内的两位数，请使用一个两重循环打印出所有十位数数字比个位数数字小的数，例如，23（2 < 3）。
+
+for x in [1,2,3,4,5,6,7,8,9 ]:
+    for y in [0,1,2,3,4,5,6,7,8,9 ]:
+        if x < y:
+            print x*10+y
 ```

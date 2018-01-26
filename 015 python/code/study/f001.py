@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 
-age = 20;
-if age > 18:
-    print 'your age is', age
-    print 'adult'
-print 'END'
+s = set(['a','b','c','c'])
+
+print s                  # set(['a','b','c']),去除重复

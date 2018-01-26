@@ -189,7 +189,7 @@ t = ('Adam',)
 print t
 ```
 
-- 元组嵌套列表，元组内列表可表
+- 元组嵌套列表，元组内列表可修改
 ```
 t = ('a', 'b', ['A', 'B'])
 L = t[2]
@@ -328,3 +328,150 @@ for x in [1,2,3,4,5,6,7,8,9 ]:
         if x < y:
             print x*10+y
 ```
+
+# 4.Dict 和 set类型
+
+## 4.1 Dict
+- dict(字典) -> Object
+- len()函数  -> length属性
+
+## 4.2 Dict 访问
+
+- 通过 d[key] 访问key对应的value值。如果key不存在，会直接报报错：KeyError.**因此可先判断key是否存在，使用in操作符**
+```
+if key in d:
+    print d[key]
+```
+
+- 通过自带的get()方法:d.get(key).如果key不存在，返回none。
+```
+d = {
+    'Adam': 95,
+    'Lisa': 85,
+    'Bart': 59
+}
+print 'Adam:',d['Adam']
+print 'Lisa:',d.get('Lisa')
+print 'Bart:',d.get('Bart')
+print d.get('new')           # none
+print d['new']               # 报错
+```
+
+## 4.3 Dict 特点
+
+- dict的第一个特点是查找速度快，无论dict有10个元素还是10万个元素，查找速度都一样。而list的查找速度随着元素增加而逐渐下降。**缺点:占用内存大，list与之相反**
+
+- 存储是无序的。
+
+- key的元素是不可变的。
+
+## 4.4 Dict 更新数据
+
+- dict是可变的,使用赋值语句
+
+## 4.5 Dict 遍历
+
+- for循环遍历
+```
+d = {
+    'Adam': 95,
+    'Lisa': 85,
+    'Bart': 59
+}
+for key in d:
+    print key,":",d[key]
+```
+
+## 4.5 set
+
+- set 持有一系列元素，这一点和 list 很像，但是set的元素没有重复，而且是无序的，这点和 dict 的 key很像。创建 set 的方式是调用 set() 并传入一个 list，list的元素将作为set的元素：
+```
+s = set(['a','b','c','c'])
+
+print s                  
+# set(['a','b','c']),去除重复
+```
+
+## 4.6 set 访问
+- 由于set存储的是无序集合，所以我们没法通过索引来访问。访问 set中的某个元素实际上就是判断一个元素是否在set中:**in**.**不识别大小写**
+```
+s = set(['adam','bart'])
+print 'adam' in s
+print 'bart' in s
+```
+
+## 4.7 set 的特点
+- set的内部结构和dict很像，唯一区别是不存储value，因此，判断一个元素是否在set中速度很快。
+
+- set存储的元素和dict的key类似，必须是不变对象，因此，任何可变对象是不能放入set中的。
+
+- set存储的元素也是没有顺序的。
+```
+# 比较繁琐的写法
+x = '???' # 用户输入的字符串
+if x!= 'MON' and x!= 'TUE' and x!= 'WED' ... and x!= 'SUN':
+    print 'input error'
+else:
+    print 'input ok'
+
+# 优化写法
+weekdays = set(['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'])
+x = '???' # 用户输入的字符串
+if x in weekdays:
+    print 'input ok'
+else:
+    print 'input error'
+```
+```
+months = set(['Jan','Feb','Mar','Apr','May','June','July','Aug','Sept','Oct','Nov','Dec'])
+x1 = 'Feb'
+x2 = 'Sun'
+
+if x1 in months:
+    print 'x1: ok'
+else:
+    print 'x1: error'
+
+if x2 in months:
+    print 'x2: ok'
+else:
+    print 'x2: error'
+```
+
+## 4.8 遍历 set
+- for 循环遍历
+```
+s = set([('Adam', 95), ('Lisa', 85), ('Bart', 59)])
+for x in s:
+    print x[0],":",x[1]
+```
+
+## 4.9 更新 set
+
+- 把新元素添加到set，set的add()方法。如果添加的元素已经存在于set中，add()不会报错，但是不会加进去了.
+```
+>>> s = set([1, 2, 3])
+>>> s.add(3)
+>>> print s
+set([1, 2, 3])
+```
+
+- 从set删除旧元素,用set的remove()方法,如果删除的元素不存在set中，remove()会报错：
+```
+# 针对下面的set，给定一个list，对list中的每一个元素，如果在set中，就将其删除，如果不在set中，就添加进去。
+s = set(['Adam', 'Lisa', 'Paul'])
+L = ['Adam', 'Lisa', 'Bart', 'Paul']
+for name in L:
+    if name in s:
+        s.remove(name)
+    else:                             # 注意冒号
+        s.add(name)
+print s
+```
+
+# 5. 函数
+
+# 5.1 内置函数
+- abs()
+
+- cmp()

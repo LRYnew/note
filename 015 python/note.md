@@ -471,7 +471,327 @@ print s
 
 # 5. 函数
 
-# 5.1 内置函数
-- abs()
+## 5.1 内置函数
+- abs()...，数学函数
 
-- cmp()
+- cmp()  比较函数，需传入两个参数
+
+- int()...,类型转化函数
+```
+# sum()函数接受一个list作为参数，并返回list所有元素之和。请计算 1*1 + 2*2 + 3*3 + ... + 100*100。
+
+L = []
+x = 1
+while (x<=100):
+    L.append(x*x)
+    x+=1
+print sum(L)
+```
+
+## 5.2 编写函数
+- 定义函数用def语句：函数名、括号中参数、冒号、函数体（返回值用return）
+```
+# 请定义一个 square_of_sum 函数，它接受一个list，返回list中每个元素平方的和。
+
+def square_of_sum(L):
+    x=0
+    for num in L:
+        x += num*num
+    return x
+
+print square_of_sum([1, 2, 3, 4, 5])
+print square_of_sum([-5, 0, 5, 15, 25])
+```
+
+## 5.3 返回多值函数
+```
+# math包提供了sin()和 cos()函数，我们先用import引用它：
+
+import math
+def move(x, y, step, angle):
+    nx = x + step * math.cos(angle)
+    ny = y - step * math.sin(angle)
+    return nx, ny
+
+>>> x, y = move(100, 100, 60, math.pi / 6)
+>>> print x, y
+151.961524227 70.0
+
+# 但其实这只是一种假象，Python函数返回的仍然是单一值：
+>>> r = move(100, 100, 60, math.pi / 6)
+>>> print r
+(151.96152422706632, 70.0)
+#用print打印返回结果，原来返回值是一个tuple！
+```
+- 在语法上，返回一个tuple可以省略括号，而多个变量可以同时接收一个tuple，按位置赋给对应的值，所以，Python的函数返回多值其实就是返回一个tuple，但写起来更方便。
+```
+# 一元二次方程的定义是：ax² + bx + c = 0,请编写一个函数，返回一元二次方程的两个解。
+
+# 参考求根公式：x = (-b±√(b²-4ac)) / 2a
+
+import math
+
+def quadratic_equation(a, b, c):
+    t = math.sqrt(b*b-4*a*c)
+    return (-b + t)/(2*a),(-b - t)/(2*a)
+
+print quadratic_equation(2, 3, 0)
+print quadratic_equation(1, -6, 5)
+```
+
+## 5.4 递归函数
+
+- 在函数内部，可以调用其他函数。如果一个函数在内部调用自身本身，这个函数就是递归函数。
+
+## 5.5 默认参数
+
+- 由于函数的参数按从左到右的顺序匹配，所以默认参数只能定义在必需参数的后面：
+```
+# OK:
+def fn1(a, b=1, c=2):
+    pass
+# Error:
+def fn2(a=1, b):
+    pass
+```
+```
+# 请定义一个 greet() 函数，它包含一个默认参数，如果没有传入，打印 'Hello, world.'，如果传入，打印 'Hello, xxx.'
+def greet(t = 'world'):
+    print 'Hello,' + t + '.'
+
+greet()
+greet('Bart')
+```
+
+## 5.6 可变参数
+可变参数的名字前面有个 * 号，我们可以传入0个、1个或多个参数给可变参数.可变参数也不是很神秘，Python解释器会把传入的一组参数组装成一个tuple传递给可变参数，因此，在函数内部，直接把变量 args 看成一个 tuple 就好了。
+```
+def fn(*args):
+    print args
+```
+```
+def average(*args):
+    sum = 0.0
+    if len(args) == 0:
+        return sum
+    for x in args:
+        sum = sum + x
+    return sum / len(args)
+print average()
+print average(1, 2)
+print average(1, 2, 2, 3, 4)
+```
+
+# 6. 切片
+
+## 6.1 对list进行切片（tuple类似）
+
+- 取list前3个元素 L[0:3] -> 取0、1、2个元素。
+- ":"前0可以省略，表示从0开始取;第二参数省略表示到末尾。
+- 传入第三个元素L[0:10:2] -> 表示每间隔2取一个。
+```
+# 1. 前10个数；
+# 2. 3的倍数；
+# 3. 不大于50的5的倍数。
+L = range(1, 101)
+
+print L[0:10]
+print L[2::3]
+print L[4:51:5]
+```
+
+## 6.2 倒序切片
+- 倒数第一个元素的索引是**-1**
+```
+>>> L = ['Adam', 'Lisa', 'Bart', 'Paul']
+
+>>> L[-2:]
+['Bart', 'Paul']
+
+>>> L[:-2]
+['Adam', 'Lisa']
+
+>>> L[-3:-1]
+['Lisa', 'Bart']
+
+>>> L[-4:-1:2]
+['Adam', 'Bart']
+```
+```
+# 最后10个数；
+
+# 最后10个5的倍数。
+L = range(1, 101)
+print L[-10:]
+print L[-46::5]
+```
+
+## 6.3 对字符串切片
+- Python没有针对字符串的截取函数，只需要切片一个操作就可以完成，非常简单
+```
+#设计一个函数，它接受一个字符串，然后返回一个仅首字母变成大写的字符串
+def firstCharUpper(s):
+    return s[:1].upper() + s[1:]
+
+print firstCharUpper('hello')
+print firstCharUpper('sunday')
+print firstCharUpper('september')
+```
+
+# 7. 迭代
+
+## 7.1 迭代
+- 在Python中，如果给定一个list或tuple，我们可以通过for循环来遍历这个list或tuple，这种遍历我们成为迭代（Iteration）。
+
+## 7.2 索引迭代
+- 有序集合，元素确实是有索引的。有的时候，我们确实想在 for 循环中拿到索引，使用枚举函数 enumerate()
+```
+for index,name in enumerare(L):
+    print index + '-' + name
+```
+
+- 实际上enumerate() 函数把：
+```
+['Adam', 'Lisa', 'Bart', 'Paul']
+
+# 变成了类似：
+
+[(0, 'Adam'), (1, 'Lisa'), (2, 'Bart'), (3, 'Paul')]
+
+# 因此，迭代的每一个元素实际上是一个tuple：
+for t in enumerate(L):
+    index = t[0]
+    name = t[1]
+    print index, '-', name
+```
+```
+# zip()函数可以把两个 list 变成一个 list：
+>>> zip([10, 20, 30], ['A', 'B', 'C'])
+[(10, 'A'), (20, 'B'), (30, 'C')]
+
+# 在迭代 ['Adam', 'Lisa', 'Bart', 'Paul'] 时，如果我们想打印出名次 - 名字（名次从1开始)，请考虑如何在迭代中打印出来
+L = ['Adam', 'Lisa', 'Bart', 'Paul']
+for index, name in zip(range(1,len(L)+1),L):
+    print index, '-', name
+```
+
+## 7.3 Dict迭代value
+
+-  values() 方法
+```
+d = { 'Adam': 95, 'Lisa': 85, 'Bart': 59 }
+print d.values()
+# [85, 95, 59]
+for v in d.values():
+    print v
+# 85
+# 95
+# 59
+```
+
+- itervalues() 方法
+
+- 区别: values() 方法实际上把一个 dict 转换成了包含 value 的list; itervalues() 方法不会转换，它会在迭代过程中依次从 dict 中取出 value，所以**itervalues() 方法比 values() 方法节省了生成 list 所需的内存**。
+
+## 7.4 Dict迭代key,value
+
+- item() 方法
+
+- iteritems() 方法
+
+- 区别:同上
+```
+d = { 'Adam': 95, 'Lisa': 85, 'Bart': 59, 'Paul': 74 }
+
+sum = 0.0
+for k, v in d.iteritems():
+    sum = sum + v
+    print str(k)+':'+str(v)
+print 'average', ':', sum/len(d)
+```
+
+# 8. 生成列表
+
+## 8.1 生成列表
+
+- 如果要生成[1x1, 2x2, 3x3, ..., 10x10]怎么做？方法一是循环：
+```
+>>> L = []
+>>> for x in range(1, 11):
+...    L.append(x * x)
+... 
+>>> L
+[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+```
+
+- 但是循环太繁琐，而列表生成式则可以用一行语句代替循环生成上面的list：
+```
+>>> [x * x for x in range(1, 11)]
+[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+```
+```
+# 请利用列表生成式生成列表 [1x2, 3x4, 5x6, 7x8, ..., 99x100]
+
+# 提示：range(1, 100, 2) 可以生成list [1, 3, 5, 7, 9,...]
+
+print [x * (x+1) for x in range(1,100,2)]
+```
+
+## 8.2 复杂列表生成
+```
+d = { 'Adam': 95, 'Lisa': 85, 'Bart': 59 }
+
+# 可以通过一个复杂的列表生成式把它变成一个 HTML 表格：
+
+tds = ['<tr><td>%s</td><td>%s</td></tr>' % (name, score) for name, score in d.iteritems()]
+print '<table>'
+print '<tr><th>Name</th><th>Score</th><tr>'
+print '\n'.join(tds)
+print '</table>'
+
+# 注：字符串可以通过 % 进行格式化，用指定的参数替代 %s。字符串的join()方法可以把一个 list 拼接成一个字符串。
+```
+
+## 8.3 条件过滤
+- 列表生成式的 for 循环后面还可以加上 if 判断。
+
+```
+# 如果我们只想要偶数的平方，不改动 range()的情况下，可以加上 if 来筛选：
+
+>>> [x * x for x in range(1, 11) if x % 2 == 0]
+[4, 16, 36, 64, 100]
+```
+```
+# 请编写一个函数，它接受一个 list，然后把list中的所有字符串变成大写后返回，非字符串元素将被忽略。
+
+# 提示：
+
+# 1. isinstance(x, str) 可以判断变量 x 是否是字符串；
+
+# 2. 字符串的 upper() 方法可以返回大写的字母。
+
+def toUppers(L):
+    return [x.upper() for x in L if isinstance(x, str)]
+print toUppers(['Hello', 'world', 101])
+```
+
+## 8.4 多层表达式
+
+- for循环可以嵌套，因此，在列表生成式中，也可以用多层 for 循环来生成列表。
+```
+>>> [m + n for m in 'ABC' for n in '123']
+['A1', 'A2', 'A3', 'B1', 'B2', 'B3', 'C1', 'C2', 'C3']
+
+# 翻译成循环代码就像下面这样：
+L = []
+for m in 'ABC':
+    for n in '123':
+        L.append(m + n)
+```
+```
+# 利用 3 层for循环的列表生成式，找出对称的 3 位数。例如，121 就是对称数，因为从右到左倒过来还是 121。
+print [x*100 + y*10 + z for x in range(1,10) for y in range(0,10) for z in range(0,10) if x==z]
+
+# 别人写法
+print [x*100+y*10+x for x in range(1,10) for y in range(0,10)]
+```

@@ -276,6 +276,79 @@ if True:
 
 ## 3.2 循环
 
-1. for
+1. for/for...else...(循环执行完，强制退出不执行)
 
-2. while/while...else...(程序结束后运行一次else代码块)，常用于递归
+- 辅助方法range()
+```
+# 常规
+for x in range(0,10)
+    print(x,end=' | ')
+
+# 间隔
+for x in range(0,10,2)
+    print(x,end=' | ')
+
+# 倒序间隔
+for x in range(10,0,-2)
+    print(x,end=' | ')
+```
+
+2. while/while...else...(程序结束后运行一次else代码块，强制退出不执行)，常用于递归
+
+# 4. 组织结构
+
+> 包(文件夹)>>>模块(文件)>>>类>>>函数 变量
+
+1. 包(文件夹)，在文件夹内需要有一个"\_\_init__.py"文件，否则只会当成普通的文件夹。
+
+- 引用 包名.文件名 》》》 seven.c4
+
+- 特殊文件"\_\_init__.py"引用 》》》 直接引用
+
+2. 文件导入
+
+- import  导入模块
+```
+# 注意前后顺序
+import f001
+
+print(f001.a)
+```
+
+- as关键字添加别名
+```
+import f001 as f
+
+print(f.a)
+```
+
+- from module import var/def...
+```
+# 引入变量
+from study.f001 import a
+print(a)
+
+# 引入模块
+from study import f001
+print(f001.a)
+
+# 引入多变量
+from study.f001 import *
+print(a)
+print(b)
+print(c)
+```
+> \*控制，模块内置属性"__all__"，控制模块变量输出
+```
+# f1.py
+__all__ = ['a','b']
+a = 1,
+b = 2,
+c = 3
+
+# f2.py
+from f1 import *
+print(a)       # >>> 1
+print(b)       # >>> 2
+print(c)       # 报错
+```

@@ -13,4 +13,4 @@ print(c == d)
 print(c is d)
 #  >>> False
 
-type()
+print(type(a))

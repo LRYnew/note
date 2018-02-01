@@ -303,7 +303,7 @@ for x in range(10,0,-2)
 
 - 引用 包名.文件名 》》》 seven.c4
 
-- 特殊文件"\_\_init__.py"引用 》》》 直接引用
+- 特殊文件"\_\_init__.py"引用 》》》 直接引用包名
 
 2. 文件导入
 
@@ -351,4 +351,54 @@ from f1 import *
 print(a)       # >>> 1
 print(b)       # >>> 2
 print(c)       # 报错
+```
+
+3. \_\_init__.py 文件
+> 包内模块初始化文件
+- 引入包或者模块，会直接执行\_\_init__.py文件
+- 可在文件内定义\_\_all__
+
+```
+# t包下存在两个模块c7.py  c8.py
+# __init__.py
+__all__ = ['c7']      # 只定义C7可导出
+
+# f1.py 和 同级目录
+
+from t import *
+print(c7.a)      # 正确输出
+print(c8.e)      # error,__all_限制了导出的模块
+```
+4. 注意点
+- 包和模块不会重复导入
+- 避免循环导入
+- 导入后，会执行模块内部代码
+
+# 4. 函数
+
+## 4.1 内置函数
+- 设置最大递归(默认递归1000)
+```
+# 引入sys模块
+import sys
+# 设置次数
+sys.setrecursionlimit(100000)
+```
+
+## 4.2 自定义函数
+
+1. 定义关键字 def
+
+2. 返回值关键字 return
+```
+# 返回多个值
+def damage(skill1,skill2):
+    damage1 = skill1 + skill2
+    damage2 = skill2 * skill1
+    return damage1,damage2
+
+damages1 = damage(100,200)        # damages1 >>> type >>> tuple
+
+# 序列解包
+damage1,damage2 = damage(100,200) # damage1,damage2 >>> int
 ```

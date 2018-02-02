@@ -389,7 +389,7 @@ sys.setrecursionlimit(100000)
 
 1. 定义关键字 def
 
-2. 返回值关键字 return
+2. 返回值关键字 return / 序列解包
 ```
 # 返回多个值
 def damage(skill1,skill2):
@@ -402,3 +402,78 @@ damages1 = damage(100,200)        # damages1 >>> type >>> tuple
 # 序列解包
 damage1,damage2 = damage(100,200) # damage1,damage2 >>> int
 ```
+
+3. 参数
+- 必须参数(必填参数)
+- 关键字参数: 可以跳过参数顺序
+```
+def add(x,y):
+    return x+y
+
+result = add(y=10,x=100) 
+# >>> 关键字参数，直接指定参数，跳过原有顺序限制
+```
+- 默认参数:必须参数在前，默认参数在后
+
+- 可变参数
+```
+def add(*args):
+    n = 0
+    print(type(args), args)
+    for i in args:
+        n += i
+    print(n)
+
+
+add(1, 2, 3, 4, 5)
+```
+
+# 5.面向对象
+
+## 5.1 类
+
+1. 类的作用
+
+- 基本作用:封装
+
+2. 类的定义
+```
+# class ClassName():
+#    类体
+
+class Student():
+    name = ''
+    age = 20
+
+    # 类内方法必须强制传入self参数
+    def print_files(self):
+        # 调用类变量需带上前缀self（类似js的this）
+        print('name:' + self.name)
+        print('age:' + str(self.age))
+
+# 实例化
+student = Student()
+student.print_files()
+```
+
+3. 类与对象
+> 面向对象:把实际或者思维上的事物映射到计算机的方式。类定义事物的特征和操作行为。类就像一个模板，可以产生很多个对象。
+- 类:定义一种事物的群体特征、行为
+- 对象:事物的具体映射（实例化）
+
+4. 构造函数 \_\_init__()
+- 实例化会自动调用构造函数
+- 构造函数允许显示调用
+- 构造函数只允许返回None
+```
+class Student():
+    name = ''
+    age = 20
+
+    # 构造函数
+    def __init__(self, name='YJob', age=18):
+        self.name = name
+        self.age = age
+```
+- 类变量:和类相关的变量
+- 实例变量:和对象相关的变量

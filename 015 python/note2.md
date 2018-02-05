@@ -577,3 +577,101 @@ else:
     print('不好意思，让您失望了~')
 ```
 
+## 6.2 表达式
+1. 字符
+- 普通字符
+- 元字符，例如: \d >>> 查找0-9数字。[元字符列表](https://baike.baidu.com/item/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/1700215?fr=aladdin#7)。
+```
+LANGUAGE2 = 'C 2 C++ 0 Python 7 JavaScript 9 Java 10 C# 27 php'
+
+s1 = re.findall('\d', LANGUAGE2)
+print(s1)
+# 列表
+```
+
+2. 字符集
+- 使用中括号包围，中括号内表示 或 关系
+- 表示除中括号以外的字符，在中括号内部添加 ^ 符号
+- 字符集范围: 用 - 符号表示
+```
+import re
+
+s = 'abc, acc, adc, aec, afc, agc'
+
+r1 = re.findall('a[cdf]c', s)
+print(r1)       # ['acc', 'adc', 'afc']
+
+r2 = re.findall('a[^df]c', s)
+print(r2)       # ['abc', 'acc', 'aec', 'agc']
+
+r3 = re.findall('a[c-e]c', s)
+print(r3)       # ['acc', 'adc', 'aec']
+```
+
+3. 概况字符集
+- \d  \D   >>>  [0-9]  [^0-9]
+- \w  \W   >>>  单词字符、非单词字符  >>>  [A-Za-z0-9_] [^A-Za-z0-9_] 
+- \s  \S   >>>  空白字符(不可见字符)、非空白字符
+```
+import re
+
+s = 'python & 996 \n\r\t\v 74233.javascript'
+
+r1 = re.findall('\w', s)
+r2 = re.findall('\W', s)
+r3 = re.findall('\s', s)
+r4 = re.findall('\S', s)
+
+print(r1)
+print(r2)
+print(r3)
+print(r4)
+```
+
+4. 数量词
+- 表示:{3}
+- 范围，用 ',' 隔开，例如{4,10},最少4个，最大10个
+```
+import re
+
+s = 'python &java966782php'
+
+r1 = re.findall('[a-z]{4,6}', s)
+r2 = re.findall('[a-z]{3,5}', s)
+print(r1)            # ['python', 'java']
+print(r2)            # ['pytho', 'java', 'php']
+```
+
+5. 贪婪和非贪婪
+- 默认: 贪婪模式
+- 非贪婪:在数量词后面添加 '?' 符号
+```
+import re
+
+s = 'python &java9a6782php'
+
+r1 = re.findall('[a-z]{3,6}', s)
+r2 = re.findall('[a-z]{3,6}?', s)      # 非贪婪
+print(r1)              # ['python', 'java', 'php']
+print(r2)              # ['pyt', 'hon', 'jav', 'php']
+```
+
+6. 特殊数量词
+- \* : 匹配0次或无限多次 >>> {0,}
+- \+ : 匹配1次或无限多次 >>> {1,}
+- ?  : 匹配0次或1次     >>> {0,1},去除后缀重复颇有效果
+> 从第一个字符开始匹配，到最后一个字符需要出现的次数:例如 python* >>> pytho需要匹配，最后一个字符 n 可以出现0次 或者 1次 或者不限次数
+```
+import re
+
+s = 'pyth0python1pythonn2'
+
+r1 = re.findall('python*', s)
+r2 = re.findall('thon+', s)
+r3 = re.findall('python?', s)
+r4 = re.findall('fython*', s)  # 第一个字符f就匹配不到了，所以输出为空列表
+print(r1)         # ['python', 'pythonn']
+print(r2)         # ['thon', 'thonn']
+print(r3)         # ['python', 'python']
+print(r4)         # []
+```

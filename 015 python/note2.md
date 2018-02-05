@@ -550,3 +550,30 @@ Student.add_sum()                # >>> 查看是否修改成功
 - 使用super关键字: super(子类名,self).实例方法名/构造函数/变量
 
 3. 子类变量或者方法与父类同名时，优先调用子类变量，方法。
+
+![python类 思维导图](./code/nine/img/类.png)
+
+# 6. 正则表达式
+> 正则表达式是一个特殊的字符序列，检测一个字符串是否与我们的设定的字符序列相匹配。快速检索文本、细化文本的操作。
+
+## 6.1 re 模块
+1. re: python提供的正则表达相关模块，需引入
+
+- 引入:import re
+
+- re.findall()方法。参数一:正则表达式规则; 参数二:相关字符串。返回值:列表类型
+```
+# 引入re模块
+import re
+
+LANGUAGE = 'C | C++ | Python | JavaScript | Java | C# | php'
+
+r = re.findall('Python', LANGUAGE)
+print(r)
+
+if len(r) > 0:
+    print('Language 语言存在 Pyhon')
+else:
+    print('不好意思，让您失望了~')
+```
+

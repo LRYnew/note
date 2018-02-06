@@ -612,6 +612,7 @@ print(r3)       # ['acc', 'adc', 'aec']
 - \d  \D   >>>  [0-9]  [^0-9]
 - \w  \W   >>>  单词字符、非单词字符  >>>  [A-Za-z0-9_] [^A-Za-z0-9_] 
 - \s  \S   >>>  空白字符(不可见字符)、非空白字符
+- . 匹配除换行符以外所有字符(\n)
 ```
 import re
 
@@ -696,3 +697,68 @@ print(r4)                 # []
 ```
 
 8. 组
+- () 括号表示，内里逻辑为与关系
+```
+# -*- coding:utf-8 -*-
+import re
+
+s = "PythonPythonPythonPythonPythonJSJS"
+
+r1 = re.findall('PythonPythonPython', s)
+r2 = re.findall('Python{3}', s)
+r3 = re.findall('(Python){3}', s)
+r4 = re.findall('(Python){3}(JS){2}', s)
+
+print(r1)
+print(r2)
+print(r3)
+print(r4)
+```
+
+9. 匹配模式参数 - findall 函数第三个参数
+- re.I:匹配时忽略大小写
+- re.S: . 符号匹配时,换行符也会进行匹配
+- ...(查资料)
+```
+import re
+
+a = 'Python C#pHp\n9667jAVA'
+
+r1 = re.findall('c#', a, re.I)
+r2 = re.findall('php.{1}', a, re.I | re.S)
+
+print(r1)
+print(r2)
+```
+## 6.2 检索和替换
+
+1. re.sub(pattern, repl, string, count=0, flags=s)
+
+- pattern: 表达式
+- repl: 替换的字符 或者 函数(重点应用)
+- string: 被检索字符串
+- count: 匹配次数，0为无限次
+- flags: 匹配模式。re.I | re.S ....
+```
+import re
+
+s = 'Python C# Java Javascript C#+C#6'
+
+# 定义convert函数
+def convert(value):
+    # 查看value值 >>> 为一个对象
+    print(value)
+    matched = value.group()        # group() 不理解
+    return '[' + matched + ']'
+
+# 字符直接替换,无限次
+r1 = re.sub('c#', 'GO', s, 0, re.I)
+print(r1)
+
+r2 = re.sub('c#', 'GO', s, 2, re.I)
+print(r2)
+
+# 函数替换
+r3 = re.sub('C#', convert, s)
+print(r3)
+```

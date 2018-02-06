@@ -675,3 +675,24 @@ print(r2)         # ['thon', 'thonn']
 print(r3)         # ['python', 'python']
 print(r4)         # []
 ```
+
+7. 边界匹配符
+- ^:首边界符
+- $:尾边界符
+```
+import re
+
+QQ = '415303453a87472830294'
+
+r1 = re.findall('\d{6,9}', QQ)
+r2 = re.findall('^\d{6,9}', QQ)
+r3 = re.findall('\d{6,9}$', QQ)
+r4 = re.findall('^\d{6,9}$', QQ)
+
+print(r1)                 # ['941530345', '874728302']
+print(r2)                 # ['941530345']
+print(r3)                 # ['472830294']
+print(r4)                 # []
+```
+
+8. 组

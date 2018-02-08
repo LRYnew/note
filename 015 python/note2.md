@@ -762,3 +762,54 @@ print(r2)
 r3 = re.sub('C#', convert, s)
 print(r3)
 ```
+
+2. 把函数作为参数传递
+```
+a = 'A738R547DD8DR92345567QQ'
+
+def convert_num(value):
+    matched = value.group()
+    if(int(matched) >= 50):
+        return '97'
+    else:
+        return '37'
+
+r4 = re.sub('\d{1,2}', convert_num, a)
+print(r4)
+```
+
+3. re.match()
+> match() 将会从字符串第一个字符开始匹配，如未找到相应结果，返回None。返回第一个匹配字符。返回值:对象
+```
+a = 'A738R547DD8DR92345567QQ'
+
+r = re.match('\d', a)
+print(r)                # None
+```
+
+4. re.search()
+> 将会搜索整个字符串，返回第一个匹配字符。返回值:对象
+```
+a = 'A738R547DD8DR92345567QQ'
+
+r2 = re.search('\d', a)
+print(r2)
+# <_sre.SRE_Match object; span=(1, 2), match='7'>
+```
+- span() 方法: 返回字符在字符串中的位置
+- group(nr) 方法: 取出返回值.分组方法.
+    - nr : 数量参数, 默认为0，取出匹配所有参数。group(1)，取出第一分组参数。
+    - nr : 允许一次传入多个参数，返回元祖
+- groups: 返回组的内容
+```
+a = 'life is short,i use python'
+
+# .匹配除换行符以外所有字符  * 匹配0次或者无限次
+r = re.search('life(.*)python', a, re.I)
+r2 = re.findall('life(.*)python', a, re.I)
+print(r)
+print(r.group())   # life is short,i use python
+print(r.group(1))  #  is short,i use 
+print(r2)          # [' is short,i use ']
+```
+!['正则表达式'](./code/ten/img/正则表达式.png)

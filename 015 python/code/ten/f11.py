@@ -22,3 +22,17 @@ print(r2)
 # 函数替换
 r3 = re.sub('C#', convert, s)
 print(r3)
+
+a = 'A738R547DD8DR92345567QQ'
+
+
+def convert_num(value):
+    matched = value.group()
+    if(int(matched) >= 50):
+        return '97'
+    else:
+        return '37'
+
+
+r4 = re.sub('\d{1,2}', convert_num, a)
+print(r4)

@@ -813,3 +813,24 @@ print(r.group(1))  #  is short,i use
 print(r2)          # [' is short,i use ']
 ```
 !['正则表达式'](./code/ten/img/正则表达式.png)
+
+# 7. json
+## 7.1 json模块
+## 7.2 反序列化 json.loads()
+- key 需要用双引号包围（单引号报错）。
+- 注意value格式
+```
+import json
+
+json_str = '{"name"："YJob", "age": 18}'
+
+data = json.loads(json_str)
+
+print(type(data))             # dict
+print(data)
+```
+## 7.3 序列化 json.dumps()
+
+# 8. 高级语法和用法
+
+## 8.1 枚举

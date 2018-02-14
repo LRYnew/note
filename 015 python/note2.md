@@ -834,3 +834,34 @@ print(data)
 # 8. 高级语法和用法
 
 ## 8.1 枚举
+
+1. enum 模块
+```
+# 引入模块
+from enum import Enum
+
+# 定义类
+class VIP(Enum):
+    YELLOW = 1
+    GREEN = 2
+    BLACK = 3
+    BLUE = 4
+    RED = 5
+
+
+print(VIP.YELLOW)           # 输出 >>> VIE.YELLOW,不会输出1
+
+vip = VIP()                 # 报错
+```
+2. 特殊性
+- 不可修改
+- 标签不可重复
+
+3. 枚举类型、枚举名称、枚举值
+- 类型: VIP.YELLOW  /  VIP['YELLOW'] >>> ENUM VIP
+- 名称: VIP.YELLOW.name  >>> str
+- 值:   VIP.YELLOW.value
+
+4. 枚举的比较运算
+- 枚举只支持等值比较  ==
+- 身份比较  is

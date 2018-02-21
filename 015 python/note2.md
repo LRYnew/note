@@ -83,6 +83,17 @@ world\
 # >>> hlowrd
 ```
 
+6. 字符串内混合变量 %s
+```
+a = '966'
+b = '742'
+
+c = 'This i %s and %s' % (a, b)
+
+print(c)
+# This i 966 and 742
+```
+
 6. ASCLL 码
 
 - ord() 方法可以转换为ascll码
@@ -405,13 +416,20 @@ damage1,damage2 = damage(100,200) # damage1,damage2 >>> int
 
 3. 参数
 - 必须参数(必填参数)
-- 关键字参数: 可以跳过参数顺序
+- 关键字参数: 可以跳过参数顺序 (定义时可使用双“**”，输出字典形式数据)
 ```
 def add(x,y):
     return x+y
 
 result = add(y=10,x=100) 
 # >>> 关键字参数，直接指定参数，跳过原有顺序限制
+
+def addKW(**kw):
+    # kw 可改变名称
+    print(kw)
+
+r = add(a=1,b=2,c=3)
+print(r)
 ```
 - 默认参数:必须参数在前，默认参数在后
 
@@ -834,3 +852,375 @@ print(data)
 # 8. 高级语法和用法
 
 ## 8.1 枚举
+
+1. enum 模块
+
+2. 特殊性
+- 不可更改
+- 标签名不重复
+
+3. 枚举类型、枚举名称、枚举值
+- 类型:VIP.YELLOW / VIP['YELLOW']
+- 名称:VIP.YELLOW.name
+- 值:VIP.YELLOW.value
+
+4. 枚举的比较运算
+- 允许等值运算: == 
+- 允许身份运算: is
+
+5. 注意事项
+- 别名: 当值相同，标签名不同，第一个以后的标签相当于第一个的别名
+```
+from enum import Enum
+
+class VIP(Enum):
+    YELLOW = 1
+    GREEN = 1               # 相当于YELLOW的别名
+    BLACK = 3
+    BLUE = 4
+    RED = 5
+
+print(VIP.GREEN)
+# VIP.GREEN
+```
+- 有别名时进行遍历，不会输出别名
+
+- 遍历输出别名请使用\_\_members__属性
+```
+from enum import Enum
+
+class VIP(Enum):
+    YELLOW = 1
+    GREEN = 1
+    BLACK = 3
+    BLUE = 4
+    RED = 5
+
+print(VIP.GREEN)
+
+for v in VIP:
+    print(v)
+
+for v in VIP.__members__:
+    print(v)
+
+for v in VIP.__members__.items():
+    print(v)
+
+
+#    VIP.YELLOW
+#    VIP.BLACK
+#    VIP.BLUE
+#    VIP.RED
+#    YELLOW
+#    GREEN
+#    BLACK
+#    BLUE
+#    RED
+#    ('YELLOW', <VIP.YELLOW: 1>)
+#    ('GREEN', <VIP.YELLOW: 1>)
+#    ('BLACK', <VIP.BLACK: 3>)
+#    ('BLUE', <VIP.BLUE: 4>)
+#    ('RED', <VIP.RED: 5>)
+```
+
+6. 枚举转换
+```
+a = 1
+
+print(VIP(a))
+# VIP.YELLOW
+```
+
+7. 扩展
+- IntEnum模块:继承此模块的枚举类，枚举值必须都为数字类型
+```
+from enum import IntEnum
+
+class VIP(IntEnum):
+    YELLOW = 1
+    GREEN = 'str'      # 报错
+    BLACK = Ttue       # 报错
+```
+
+- unique(装饰器):使枚举标签名唯一，不会出现别名
+```
+from enum import IntEnum,unique
+
+@unique
+class VIP(IntEnum):
+    YELLOW = 1
+    GREEN = 'str'      # 报错
+    BLACK = Ttue       # 报错
+```
+
+- 枚举类为单例模式，不允许实例化
+
+## 8.2 闭包
+> 闭包 = 函数 + 环境变量
+
+1. 闭包变量查看
+```
+def cover_pef():
+    a = 25
+
+    def cover(x):
+        return a * (x ** 2)
+    return cover
+
+
+a = 10
+f = cover_pef()
+print(f(2))                                 # 100
+print(f.__closure__)                        # (<cell at 0x02199450: int object at 0x6B3CD5B0>,)
+print(f.__closure__[0].cell_contents)       # 25
+```
+
+2. 问题: 步数逐步累积，缓存不清零  》》》 闭包:记忆上一次调用状态
+```
+# 非闭包模式
+origin = 0
+
+def go(step):
+    # 使用global关键字，避免以下逻辑把origin误任务局部变量
+    global origin
+    new_ori = origin + step
+    origin = new_ori
+    retuen new_ori
+
+print(go(2))           # 2
+print(go(7))           # 9
+print(go(8))           # 17
+```
+```
+# 闭包模式
+def factory(pos):
+    def go(step):
+        # nonloacl关键字，强制声明一个变量为非局部变量
+        nonlocal pos
+        new_pos = pos + step
+        pos = new_pos
+        return new_pos
+    return go
+
+f = factory(0)
+print(f(2))
+print(f(10))
+print(f(12))
+```
+
+# 9. 函数式编程
+
+## 9.1 匿名函数 lambda
+
+1. 与函数定义区别
+- 使用 lambda 关键字定义
+- 不需要添加函数名
+- 不允许使用代码块，只允许表达式
+- 不需要使用return关键字进行返回值
+```
+# lambda parameter_list: expression
+
+def add(x, y):
+    return x + y
+
+lambda x, y: x + y
+```
+
+2. 扩展三元表达式
+- 定义方式: True时结果 if 条件 else False时结果
+```
+x = 1
+y = 2
+result = x if x > y else y
+print(result)
+```
+
+3. 映射:map >>> 类似循环
+```
+# 输出y为x的值的平方
+x = [1, 2, 3, 4, 5, 6, 7, 8]
+
+def square(x):
+    return x**2
+
+y = map(square, x)
+
+print(list(y))
+```
+
+4. map 与 labbda 结合使用(推荐方式)
+```
+# 单参数
+x = [1, 2, 3, 4, 5, 6, 7, 8]
+
+y = map(lambda x: x * x, x)
+
+print(list(y))
+# [1, 4, 9, 16, 25, 36, 49, 64]
+```
+```
+# 多参数
+x = [1, 2, 3, 4, 5, 6, 7, 8]
+
+y = [8, 7, 6, 5, 4, 3, 2, 1]
+
+r = map(lambda x, y: x * x + y, x, y)
+
+print(list(r))
+# [9, 11, 15, 21, 29, 39, 51, 65]
+``` 
+```
+# 多参数,列表个数不同,按个数较少的列表进行计算
+x = [1, 2, 3, 4, 5, 6, 7, 8]
+
+y = [8, 7, 6, 5, 4, 3]
+
+r = map(lambda x, y: x * x + y, x, y)
+
+print(list(r))
+# [9, 11, 15, 21, 29, 39]
+```
+
+5. reduce 列表连续计算操作
+- 参数1: 函数强制传入两个参数
+    - 函数第一个参数: 有初始值，第一次为初始值，后续为上一次计算结果；无初始值，第一次为列表为第一个值
+- 参数3: 初始值
+- 引入:先引入functools模块内的reduce
+```
+from functools import reduce
+
+list_x = [1, 2, 3, 4, 5, 6, 7, 8]
+
+result = reduce(lambda x, y: x * y + y, list_x)
+
+print(result)
+```
+
+6. filter 过滤
+```
+s1 = [1, 0, 1, 3, 5, -1, 6, 2]
+s2 = ['A', 'b', 'c', 'Ab', 'bC']
+
+r1 = filter(lambda x: True if x > 0 else False, s1)
+r2 = filter(lambda x: x.isupper(), s2)
+
+print(list(r1))   # [1, 1, 3, 5, 6, 2]
+print(list(r2))   # ['A']
+```
+
+## 9.2 装饰器
+1. 初步接触
+> 需求: 对现有函数增加业务逻辑，例如:在执行之前添加当前时间
+```
+import time
+
+def f1():
+    # 方法一 >>> 直接添加
+    # print(time.time())
+    print("This is f1")
+
+def f2():
+    # 方法一 >>> 直接添加
+    # print(time.time())
+    print("This is f2")
+
+# 方法二
+def print_time(func):
+    print(time.time())
+    func()
+
+print_time(f1)
+print_time(f2)
+
+# 方法三:装饰器
+def decorator(func):
+    def wrapper():
+        print(time.time())
+        func()
+    return wrapper
+
+# 调用方式略显繁琐
+f = decorator(f1)
+f()
+```
+
+2. 装饰器调用
+```
+# 装饰
+@decorator
+def f1():
+    print("This is f1")
+
+#直接调用
+f1()
+```
+
+3. 包含参数的装饰器
+```
+def decorator(func):
+    def wrapper(*args):
+        print(time.time())
+        func(*args)
+    return wrapper
+
+@decorator
+def f1(func_name):
+    print('This is my classmate:' + str(func_name))
+
+@decorator
+def f2(func_name1, function_name2)
+    print('This is my student:' + str(func_name1) + '、' + str(func_name2))
+```
+
+4. 带关键字参数的装饰器
+```
+def decorator(func):
+    def wrapper(*args, **kw):
+        print(time.time())
+        func(*args, **kw)
+    return wrapper
+
+@decorator
+def f1(func_name1,func_name2,a = 3,c =4):
+    print('This is my student:' + str(func_name1) + '、' + str(func_name2) + a + c)
+```
+
+# 10. 插件推荐
+
+1. BeautifulSoup
+2. scrapy
+
+# 11. 杂序
+
+## 1. 模拟switch...case...
+
+## 2. 列表推导式(列表生成)
+1. 生成列表每项的平方
+2. 列表、集合、元祖、字典都可使用推导式 
+```
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# 简单
+b = [i**2 for i in a]
+# 添加判断条件
+c = [i**2 for i in a if i > 5]
+# 列表、集合、元祖、字典都可使用
+d = {i**2 for i in a if i > 5}
+
+print(b)
+print(c)
+print(d)
+```
+3. 字典推导
+```
+di = {
+    "果小妹": 20,
+    "西小伙": 21,
+    "狼小弟": 22
+}
+
+dic = { value:key for key, value in di.items()}
+
+print(dic)
+```

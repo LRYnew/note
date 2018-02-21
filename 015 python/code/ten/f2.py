@@ -1,9 +1,9 @@
 # -*- coding:utf-8 -*-
 import re
 
-s = 'abc, acc, adc, aec, afc, agc'
+s = 'ac,abfc, acfc, adfc, aefc, affc, agfc'
 
-r1 = re.findall('a[cdf]c', s)
+r1 = re.findall('a.+c+', s)
 print(r1)
 
 r2 = re.findall('a[^df]c', s)

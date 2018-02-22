@@ -46,3 +46,8 @@
 ## 2. 自定义目录 - app
 - 通过Tool > Run manage.py Task 进入django命令
 - startapp appname
+- 应用层目录
+    - views.py: 返回HTML页面
+    - model.py: 定义数据库中的表
+    - admin.py: admin相关
+    - test.py: 测试相关

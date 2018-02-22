@@ -1224,3 +1224,23 @@ dic = { value:key for key, value in di.items()}
 
 print(dic)
 ```
+
+## 3. None
+
+## 4. 自定义对象控制布尔值
+1. 默认为True
+2. \_\_bool__，如果定义此函数，以此函数返回值为准，优先级大于\_\_len__
+3. \_\_len__，如果定义此函数，以此函数返回值为准
+```
+class Test():
+    def __bool__(self):
+        # return 0, 不是bool类型会报错
+        return False
+
+    def __len__(self):
+        # 返回整数类型或者bool类型不会报错
+        return 10
+
+print(len(Test()))
+print(bool(Test()))
+```

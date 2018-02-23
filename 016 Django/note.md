@@ -51,3 +51,43 @@
     - model.py: 定义数据库中的表
     - admin.py: admin相关
     - test.py: 测试相关
+
+## 3. 其他目录
+- static
+- log
+- media
+- apps
+
+## 4. 配置数据库
+1. 修改设置
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'djangotest',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': 'localhost',
+        'PORT': '3306',
+        'CHARSET': 'utf8'
+    }
+}
+```
+2. 安装mysql驱动
+- mysql-python(python3.6 不支持此驱动)
+
+- pymysql
+```
+# 安装驱动
+pip install PyMysql
+
+# 在__init.py__引入
+import pymysql
+pymysql.install_as_MySQLdb()
+```
+
+3. 数据表生成
+- makemigrations
+- migrate
+
+## 5. url配置

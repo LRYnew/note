@@ -58,8 +58,22 @@
 - media
 - apps
 
-## 4. 配置数据库
-1. 修改设置
+## 4. 项目流程
+### 1. 配置数据库
+1. 安装mysql驱动
+- mysql-python(python3.6 不支持此驱动)
+
+- pymysql
+```
+# 安装驱动
+pip install PyMysql
+
+# 在__init.py__引入
+import pymysql
+pymysql.install_as_MySQLdb()
+```
+
+2. 修改DATABASES设置
 ```
 DATABASES = {
     'default': {
@@ -73,21 +87,69 @@ DATABASES = {
     }
 }
 ```
-2. 安装mysql驱动
-- mysql-python(python3.6 不支持此驱动)
-
-- pymysql
-```
-# 安装驱动
-pip install PyMysql
-
-# 在__init.py__引入
-import pymysql
-pymysql.install_as_MySQLdb()
-```
 
 3. 数据表生成
 - makemigrations
 - migrate
 
-## 5. url配置
+4. url.py配置
+
+5. views.py编写
+
+6. model.py编写
+
+- 导入models模块
+```
+from django.db import models
+```
+- 定义类名: **类名代表数据库表名**，且继承了models.Model
+- 字段名: 类内的字段代表数据表中的字段name
+- 参数:
+    - max_length: 最大字节数
+    - verbose_name: 类似备注
+```
+from django.db import models
+
+# Create your models here.
+# 表名
+class UserMessage(models.Model):
+    # 字段
+    name = models.CharField(max_length=20, verbose_name="用户名")
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1244,3 +1244,4 @@ class Test():
 print(len(Test()))
 print(bool(Test()))
 ```
+

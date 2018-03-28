@@ -67,3 +67,7 @@ class LoginForm(forms.Form):
         'min_length': '密码不能小于6位数'
     })
 ```
+
+
+# 7 注册过程
+## 1. 验证码插件 - django-simple-captcha

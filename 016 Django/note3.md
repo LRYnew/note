@@ -69,3 +69,28 @@ urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='index.html'),name='index')
 ]
 ```
+
+
+## 7.  邮件发送
+```
+# 自定义文件 utils.email_send
+from django.core.mail import send_mail
+from ssonline.settings import EMAIL_FROM
+
+def email_send():
+    email_title = '邮件标题'
+    email_body = '邮件主题'
+    email_status = send_mail(email_title, email_body, EMAIL_FROM, [1@1.com])
+
+    if email_status:
+        pass
+
+# setting.py
+EMAIL_HOST = 'smtp.qq.com'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = 'YJob12138@foxmail.com'
+EMAIL_HOST_PASSWORD = 'vejkmdubvzqvbggf'
+EMAIL_USE_TLS = True                         # 安全验证
+# EMAIL_FROM = 'YJob12138@foxmail.com'
+DEFAULT_FROM_EMAIL = 'YJob12138@foxmail.com'
+```

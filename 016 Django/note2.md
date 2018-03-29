@@ -71,3 +71,7 @@ class LoginForm(forms.Form):
 
 # 7 注册过程
 ## 1. 验证码插件 - django-simple-captcha
+
+## 2. 编写注册类
+
+## 3. 绑定urls

@@ -94,3 +94,5 @@ EMAIL_USE_TLS = True                         # 安全验证
 # EMAIL_FROM = 'YJob12138@foxmail.com'
 DEFAULT_FROM_EMAIL = 'YJob12138@foxmail.com'
 ```
+
+7. 分页 - pure pagination

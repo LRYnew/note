@@ -386,6 +386,61 @@ cd ~/.ssh/
 
 # 生成key
 ssh-keygen
+
+ssh-keygen -t rsa -f ~/.ssh/id_rsa.sohu -C "email"
+```
+
+2. 添加
+```
+# 公钥内容添加到相应账号
+
+# 添加私钥
+#  ssh-agent bash,出错时执行
+ssh-add ~/.ssh/id_rsa
+
+# 修改配置
+# ~/.ssh/config
+# github
+Host github.com
+    HostName github.com
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_rsa_github
+ 
+# gitlab
+Host gitlab.example.com
+    HostName gitlab.example.com
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_rsa_gitlab
+```
+
+3. 修改密码
+```
+# 命令
+ssh-keygen -p <keyname>
+```
+
+4. 拉取
+```
+# 不要添加sudo命令
+git clone git@gitlab.cj026.com:cj_dev/fjcjkj_hr.git
+```
+
+## 3. 自动补全
+```
+# 下载源码 使用下载源码中的 git-completion.bash 自动补全命令的文件
+git clone git@github.com:git/git.git
+
+# 复制 git-completion.bash 文件
+cp contrib/completion/git-completion.bash /etc/bash_completion.d/
+
+# 加载脚本
+source /etc/bash_completion.d/git-completion.bash
+
+# 自动加载脚本  vim  ~/.bash_profile
+# Git bash autoload
+if [ -f /etc/bash_completion.d/git-completion.bash ];then
+    source /etc/bash_completion.d/git-completion.bash
+fi
 ```
 
 # 九 python3 安装
@@ -525,8 +580,35 @@ ntpdate cn.pool.ntp.org
 ```
 
 3. 设置时区
+```
+# /etc/localtime 删除
 
+# 创建对应软链接
+ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+```
 
 ## 3. Logrotate 日志切割
+1. 概念: 对日志进行切割
+2. 基本操作
+```
+# 文件夹 /etc/logrotate.d/
+/var/log/nginx/*.log {
+        daily                           # 时间间隔 weekly、monthly、yearly
+        missingok                       # 在日志轮循期间，任何错误将被忽略，例如“文件无法找到”之类的错误。
+        rotate 52                       # 一次将存储5个归档日志。对于第六个归档，时间最久的归档将被删除。
+        compress                        # 在轮循任务完成后，已轮循的归档将使用gzip进行压缩
+        delaycompress       # 总是与compress选项一起用，delaycompress选项指示logrotate不要将最近的归档压缩，压缩将在下一次轮循周期进行
+        notifempty                      # 如果日志文件为空，轮循不会进行。
+        create 640 nginx adm            # 以指定的权限创建全新的日志文件，同时logrotate也会重命名原始日志文件
+        sharedscripts
+        dateext                         # 以日期结尾
+        postrotate                      # 在所有其它指令完成后，postrotate和endscript里面指定的命令将被执行。
+                if [ -f /var/run/nginx.pid ]; then
+                        kill -USR1 `cat /var/run/nginx.pid`
+                fi
+        endscript
+}
+```
 
 ## 4. supervisor 进程管理
+1. pip install supervisor

@@ -34,3 +34,6 @@ pip install django-filter  # Filtering support
     - UpdateModelMixin
     - RetrieveModelMixin
     - DestoryModelMixin
+
+
+# 三 跨域 - django cors headers

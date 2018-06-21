@@ -59,3 +59,37 @@ webpack --mode=none --config webpack.config.js
 # 安装到对应项目
 npm install --save-dev babel-loader babel-core
 ```
+
+2. babel presets : 规范总结
+```
+# 常用
+es2015
+es2016
+es2017
+env: 包括 2015 2016 2017 最新的集合
+babel-presets-recat
+babel-presets-stage 0-3
+其他自定义规范
+```
+```
+# 根据babel最新版本安装
+npm install @babel/preset-env --save-dev
+
+# 普通版本安装
+npm install babel-preset-env --save-dev
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

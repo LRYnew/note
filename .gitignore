@@ -1,5 +1,5 @@
 .DS_Store
-/030 webpack/
+/030 webpack/demo/*/node_modules/
 /dist/
 npm-debug.log*
 yarn-debug.log*

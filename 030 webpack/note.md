@@ -60,7 +60,7 @@ webpack --mode=none --config webpack.config.js
 npm install --save-dev babel-loader babel-core
 ```
 
-2. babel presets : 规范总结
+2. babel presets : 规范总结/编译规范
 ```
 # 常用
 es2015
@@ -78,8 +78,6 @@ npm install @babel/preset-env --save-dev
 # 普通版本安装
 npm install babel-preset-env --save-dev
 ```
-
-
 
 
 

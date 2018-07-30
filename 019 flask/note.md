@@ -276,3 +276,40 @@ loop.cycle 是 一个帮助性质的函数，可以接受两个字符串参数�
 ```
 # 管道符号
 ```
+
+- url_for 函数: 反向构建
+```
+<link rel="stylesheet" href="{{ url_for('static', filename='test.css') }}">
+```
+
+- Messageing Flash 消息闪现
+```
+# secure
+SECRET_KEY = 'random string'
+
+# views.py
+
+@web.test('/test')
+
+flash('YJob')
+flash('EJob', category='error')
+flash('WJob', category='wraning')
+return render_template('test')
+
+
+# test.html
+{% block content%}
+    {% set msg = get_flashed_messages() %} {# set 设置变量关键字，作用域为整个block #}
+    {{msg}}}
+
+    {% with message = get_flashed_messages() %}
+    {% endwith%}
+    {{message}} {# 获取不到，不在with作用域内 #}
+
+    {% set error = get_flashed_messages(category_filter=['error']) %}
+    {{error}}}
+
+    {% set wran = get_flashed_messages(category_filter=['wraning']) %}
+    {{error}}}
+{% endblock%}
+```

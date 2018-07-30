@@ -186,3 +186,78 @@ t = threading.current_thread()
 
 print(t.getName())
 ```
+
+# 8. Jinja2 模板引擎
+
+## 1. 常用语法
+
+- 数据展示 {{}}
+
+- 条件判断
+```
+{% if ... %}
+    <div></div>
+{% else if ...%}
+    <div></div>
+{% else %}
+    <div></div>
+{% endif %}
+```
+
+- 循环判断
+ 
+```
+{# 数组循环 #}
+{% for val in [2,3,4,5,6] %}
+    <div>{{ loop.index0 }}:{{ val }}</div>
+  {% endfor %}
+```
+```
+loop.index 当 前迭代的索引，从1开始算
+
+loop.index0 当前迭代的索引，从0开始算
+
+loop.revindex 相 对于序列末尾的索引，从1开始算
+
+loop.revindex0 相对于序列末尾的索引，从0开始算
+
+loop.first 相 当于 loop.index == 1.
+
+loop.last 相当于 loop.index == len(seq) - 1
+
+loop.length 序列的长度.
+
+loop.cycle 是 一个帮助性质的函数，可以接受两个字符串参数，如果当前循环索引是偶数，则显示第一个字符串，是奇数则显示第二个字符串。它常被在表格中用来用不同的背景 色区分相邻的行
+```
+
+- 继承
+```
+# layout.html
+
+{% block head%}
+    <div>this is head</div>
+{% endblock %}
+
+{% block content%}
+    <div>this is content</div>
+{% endblock %}
+
+{% block foot%}
+    <div>this is foot</div>
+{% endblock %}
+
+
+# test.html
+{% extends 'layout.html'%}
+
+{% block content%}
+{{super()}} {# super() 继承父模板内的内容 #}
+<div>this is test content</div>
+{% endblock%}
+
+```
+
+- 过滤器
+```
+# 管道符号
+```

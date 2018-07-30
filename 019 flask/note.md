@@ -176,6 +176,14 @@ app.register_blueprint(web)
 
 ## 3. python 线程相关
 
+- python 不能充分利用多核 CPU 优势
+
+- GIL 全局解释器锁
+
+- Loacl()
+
+- LoaclStack()
+
 1. 语法
 ```
 import treading
@@ -186,3 +194,10 @@ t = threading.current_thread()
 
 print(t.getName())
 ```
+
+# 8. ViewModel
+
+1. 解决问题
+- 裁剪: 对多余数据进行删减
+- 修饰: 对现有数据进行修改，例如书名添加 书名号 等
+- 合并: 对多个原始数据进行整合

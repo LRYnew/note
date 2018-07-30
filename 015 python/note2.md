@@ -1052,7 +1052,7 @@ y = map(square, x)
 print(list(y))
 ```
 
-4. map 与 labbda 结合使用(推荐方式)
+4. map 与 lambda 结合使用(推荐方式)
 ```
 # 单参数
 x = [1, 2, 3, 4, 5, 6, 7, 8]

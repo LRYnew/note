@@ -310,6 +310,6 @@ return render_template('test')
     {{error}}}
 
     {% set wran = get_flashed_messages(category_filter=['wraning']) %}
-    {{error}}}
+    {{wran}}
 {% endblock%}
 ```
